@@ -62,7 +62,6 @@ body{
 }
 .bold{
     font-weight: 700;
-    color: #000000;
     margin-bottom: 14px;
 }
 .red{
@@ -72,63 +71,52 @@ body{
 }
 .h3{
     font-size: 20px;
-    font-weight: 400;
-    color: #000000;
     margin-bottom: 16px;
-    letter-spacing: 6%;
+    letter-spacing: 0.06em;
 }
 .textright{
     text-align: right;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 24px;
 }
 .uppercase{
     text-transform: uppercase;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .italic{
     font-style: italic;
     font-weight: 400;
-    color: #000000;
     margin-bottom: 16px;
 }
 .underline{
     text-decoration: underline;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .normal{
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .fontsize18{
     font-size: 18px;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .strikethrough{
     text-decoration: line-through;
     font-size: 18px;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .fontsize16{
     font-size: 16px;
     font-weight: 500;
-    color: #000000;
     margin-bottom: 16px;
 }
 .weight{
     font-size: 18px;
     font-weight: 900;
-    color: #000000;
     margin-bottom: 16px;
 }
 
