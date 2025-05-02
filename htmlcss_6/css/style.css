@@ -1,126 +1,164 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-*,*::before,*::after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-html,body{
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
 }
 
-input,button,textarea{font-family: inherit;}
-
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding: 0;border: 0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-
-body{
-    padding: 30px;
+nav,
+footer,
+header,
+aside {
+  display: block;
 }
 
-.category{
-    letter-spacing: 2px;
-    font-size: 24px;
-    margin: 50px 0px 20px 0px;
-}
-.title{
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 30px;
-}
-
-.checklist li{
-    margin-bottom: 10px;
-    font-family: sans-serif;
-}
-.checklist img{
-    width: 16px;
-    height: 16px;
-}
-.line-through{
-    text-decoration: line-through;
-}
-.active{
-    font-style:italic;
-    color: #333;
-}
-.semi-active{
-    font-weight: bold;
-    color: black;
-    font-style: arial;
-}
-.inactive{
-    letter-spacing: 2px;
-    padding: 0px 0px 70px 0px;
-    
-}
-.secondchecklist li{
-    margin-bottom: 10px;
-    font-family: sans-serif;
-}
-.secondchecklist img{
-    width: 16px;
-    height: 16px;
-
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-.twosemi-active:hover{
-    color: red;
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  padding: 30px;
+}
+
+.category {
+  letter-spacing: 2px;
+  font-size: 24px;
+  margin: 50px 0px 20px 0px;
+}
+.title {
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.checklist li {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.checklist img {
+  width: 16px;
+  height: 16px;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.active {
+  font-style: italic;
+  color: #333;
+}
+.semi-active {
+  font-weight: bold;
+  color: black;
+  font-style: arial;
+}
+.inactive {
+  letter-spacing: 2px;
+  padding: 0px 0px 70px 0px;
+}
+.secondchecklist li {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.secondchecklist img {
+  width: 16px;
+  height: 16px;
+}
+
+.twosemi-active:hover {
+  color: red;
 }
 .textbutton {
-    background-color: aqua;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border: none;
-   
+  background-color: aqua;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: none;
 }
-.textbutton img{
-width: 20px;
-height: 15px;    
+.textbutton img {
+  width: 20px;
+  height: 15px;
 }
-.textbutton:hover{
-    background-color:darkgreen;
+.textbutton:hover {
+  background-color: darkgreen;
 }
-.textbutton:active{
-
-    background-color: #333;
+.textbutton:active {
+  background-color: #333;
 }
-.textinput{
-    border: 1px solid #666;
-    height: 50px;
-    padding: 0px 15px;
-    font-size: 18px;
-    width: 300px;
+.textinput {
+  border: 1px solid #666;
+  height: 50px;
+  padding: 0px 15px;
+  font-size: 18px;
+  width: 300px;
 }
-.textinput:focus{
-    box-shadow: 0 0 10px  rgb(34, 203, 203);
+.textinput:focus {
+  box-shadow: 0 0 10px rgb(34, 203, 203);
 }
