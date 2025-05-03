@@ -1,0 +1,47 @@
+// @import "nullstyle.sccs";
+
+$fz:100px;
+$color_1:#000;
+$color_2:#fff;
+
+.tplbolder{
+    font-size: 100px;
+    border-bottom: 5px dashed red;
+}
+
+@mixin fontz($f,$c){
+    font-size: $f;
+    color: $c;
+}
+
+.block{
+    width:300px / 960px * 100%;
+    background-color: #666;
+    padding:30px;
+    line-height:60px;
+    .blockt__text{
+        font-size:$fz;
+        span{
+            color: green;
+        }
+    }
+}
+.link{
+    @include fontz(80px,green );
+    color: $color_1;
+    text-decoration:underline;
+    font-size:$fz;
+    .block &{
+        font-size:$fz;
+    }
+    &:hover{
+        color:$color_2;
+    }
+    // @extend .tpbolder;
+}
+
+.link-2{
+    @include fontz(50px,green);
+    border-bottom:5px dashed #000;
+    @extend .tplbolder
+}
