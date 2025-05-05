@@ -1,0 +1,21 @@
+.fb-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1877f2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.fb-button:hover {
+  background-color: #166fe5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.fb-button svg {
+  fill: white;
+}
