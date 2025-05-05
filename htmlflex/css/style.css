@@ -9,14 +9,12 @@ body {
 }
 .block__row {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap:wrap;
   border: 20px solid #ece89d;
   margin: 0px 0px 20px 0px;
 }
-.block__column {
-  border: 20px solid #5e5373;
-}
 .block__item {
+  border: 20px solid #5e5373;
   background-color: #18b5a4;
   padding: 50px;
   font-size: 50px;
