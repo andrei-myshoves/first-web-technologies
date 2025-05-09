@@ -23,8 +23,14 @@ body{
     justify-content: space-between;
 
 }
+.hi__image{
+    flex: 0 0 200px;
+}
+.hi__image img{
+    max-width: 100%; 
+}
 .hi__body{
-    color: #fff;
+    color:#fff;
 }
 .hi__title{
     text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
@@ -32,7 +38,7 @@ body{
     margin-bottom: 38px;
 }
 .hi__list li{
-   background: url(../img/check-mark-svgrepo-com.svg)left no repeat;
+   background:url(../img/icons8-галочка-48.png)left no-repeat;
    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
    font-size: 20px;
    line-height: 22px;
@@ -43,7 +49,6 @@ body{
     margin:0px;
 }
 .hi__title{
-    color: #445161;
     font-size: 30px;
     line-height: 36px;
 }
@@ -62,6 +67,7 @@ body{
     padding-left: 30px;
 }
 .what__title{
+    font-size: 28px;
     margin-bottom: 33px;
 }
 .what__text p{
@@ -75,6 +81,7 @@ body{
     padding: 50px 0 20px 0;
 }
 .columns__title{
+    font-size: 28px;
     text-align: center;
     margin-bottom:30px;
 }
@@ -93,6 +100,9 @@ body{
 }
 .item__image{
     flex: 0 0 200px;
+}
+.item__image img{
+    max-width: 100%; 
 }
 .item__body{
     flex: 1 1 auto;
@@ -113,6 +123,7 @@ body{
     padding: 50px 0;
 }
 .vertical__title{
+    font-size: 20px;
     text-align: center;
     margin-bottom:30px;
 }
