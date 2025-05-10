@@ -3,3 +3,8 @@ body{
     font-size: 18px;
     color: #000000;
 }
+.container{
+    min-width: 1248px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
