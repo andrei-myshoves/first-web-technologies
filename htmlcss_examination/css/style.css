@@ -1,4 +1,4 @@
-body {
+.body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #000000;
@@ -7,25 +7,37 @@ body {
   margin: 0 auto;
   padding: 0px 16px;
 }
-.full-screen {
-  min-height: 100svh;
-  background: url(../img/head\ 15.png) no-repeat center / cover;
-}
-.full-screen__header{
-    padding-top: 32px;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 17,5px;
-    padding-bottom: 17,5px;
-}
-.header__nav{
-    display: flex;
-    gap: 32px;
+@media (min-width: 834px) {
+  .container {
+    padding: 0 24px;
+  }
 }
 @media (min-width: 1248px) {
   .container {
-    min-width: 459px;
+    padding: 0 calc(50% - 600px);
   }
 }
+.full-screen {
+  min-height: 100svh;
+  background: url(../img/head\ 15.png) no-repeat center / cover;
+  padding-top: 32px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+}
+.header__logo {
+  width: 99px;
+  height: 22px;
+}
+.header__logo-img {
+  width: 100%;
+  height: 100%;
+}
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
