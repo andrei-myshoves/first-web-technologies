@@ -46,10 +46,12 @@
 }
 @media (min-width: 834px) {
   .header {
-    padding: 25px 0;
+    padding: 25px 0; 
   }
-  .header__logo {
-    width: 220px;
+  .header__logo-img{
+    margin-top: 6px;
+    width: 198px;
+    font-size: 36px;
   }
   .header__nav {
     gap: 20px;
@@ -63,10 +65,28 @@
     display: block;
     color:#FFFFFF ;
   }
+  .menu{
+    width: 66px;
+    height: 20px;
+  }
+  .basket{
+    width: 72px;
+    height: 20px;
+  }
   .search-input {
     padding: 8px 15px;
     border: 1px solid #ddd;
     border-radius: 20px;
     width: 180px;
+    background: transparent;
+    color: #FFFFFF;
+  }
+  .search-input::placeholder{
+    color: #FFFFFF;
+  }
+  .header__line{
+   border-bottom: 0.5px solid #FFFFFF;
+   width: 786;
+   margin-left: 34px;
   }
 }
