@@ -137,3 +137,8 @@
     text-align: left;
   }
 }
+@media (min-width: 1248) {
+  .full-screen_title {
+    margin-top: 63px;
+  }
+}
