@@ -54,6 +54,65 @@
   text-align: center;
   margin: 29px 16px 16px;
 }
+.footer {
+  border: 1px solid #ccc;
+  max-width: 600px;
+  background-color: #f7f6f6;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu h2,
+.footer__contacts h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 32px;
+}
+.footer__menu li,
+.footer__contacts link {
+  margin-top: 12px;
+}
+.footer__content-list {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+  margin-top: 12px;
+}
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  margin-right: 14px;
+  margin-top: 16px;
+}
+.footer__subscribe {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 32px;
+}
+.footer__subscribe input {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #c4c4c4;
+  width: 268px;
+  height: 46px;
+  margin-top: 16px;
+}
+.footer__subscribe input::placeholder {
+  color: #c4c4c4;
+  text-align: left;
+  padding-left: 24.34px;
+}
+.footer__subscribe button {
+  width: 268px;
+  height: 46px;
+  background-color: #ded7d769;
+  border: none;
+  border-radius: 20px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
 @media (min-width: 834px) {
   .full-screen {
     padding-top: 0;
