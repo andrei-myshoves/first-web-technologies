@@ -55,19 +55,29 @@
   margin: 29px 16px 16px;
 }
 .footer {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
-  max-width: 600px;
   background-color: #f7f6f6;
+  padding-top: 32px;
 }
 .footer__content {
   display: flex;
   justify-content: space-between;
 }
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .footer__menu h2,
 .footer__contacts h2 {
   font-size: 24px;
   font-weight: 500;
-  margin-top: 32px;
 }
 .footer__menu li,
 .footer__contacts link {
@@ -86,8 +96,12 @@
   margin-top: 16px;
 }
 .footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 12px;
-  text-align: center;
   margin-top: 32px;
 }
 .footer__subscribe input {
@@ -105,6 +119,7 @@
   padding-left: 24.34px;
 }
 .footer__subscribe button {
+  gap: 10px;
   width: 268px;
   height: 46px;
   background-color: #ded7d769;
