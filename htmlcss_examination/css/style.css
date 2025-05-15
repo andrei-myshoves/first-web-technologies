@@ -200,6 +200,15 @@
     font-size: 16px;
     text-align: left;
   }
+  .footer{
+    flex-direction: row;
+  }
+  .footer__content {
+    justify-content: normal;
+  }
+  .footer__menu{
+    margin-right: 150px;
+  }
 }
 @media (min-width: 1248) {
   .full-screen__title {
