@@ -150,7 +150,7 @@
   margin-top: 12px;
   margin-bottom: 32px;
 }
-@media (min-width: 834px) {
+@media (min-width: 786px) {
   .full-screen {
     padding-top: 0;
   }
@@ -218,7 +218,7 @@
   flex: 1 1 auto;
   }
 }
-@media (min-width: 1248px) {
+@media (min-width: 1200px) {
   .full-screen__title {
     margin-top: 63px;
   }
