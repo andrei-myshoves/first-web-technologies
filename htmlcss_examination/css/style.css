@@ -82,6 +82,9 @@
   display: flex;
   justify-content: space-between;
 }
+.footer__logo-link{
+  display:none;
+}
 .footer__menu {
   display: flex;
   flex-direction: column;
@@ -218,5 +221,12 @@
 @media (min-width: 1248) {
   .full-screen__title {
     margin-top: 63px;
+  }
+  .footer__logo-link{
+    display: block;
+  }
+  .footer__logo-img{
+    width: 144px;
+    height: 44px;
   }
 }
