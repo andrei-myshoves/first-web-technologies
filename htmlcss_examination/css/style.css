@@ -205,6 +205,15 @@
     font-size: 16px;
     text-align: left;
   }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 150px;
+  }
+  .footer__content{
+  flex: 1 1 auto;
+  }
 }
 @media (min-width: 1248) {
   .full-screen__title {
