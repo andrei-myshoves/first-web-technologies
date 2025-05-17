@@ -115,10 +115,6 @@
   display: flex;
   gap: 14px;
 }
-.footer__social-icon img {
-  width: 28px;
-  height: 28px;
-}
 .footer__social-icon-img {
   width: 100%;
   height: 100%;
