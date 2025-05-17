@@ -76,6 +76,7 @@
   border: 1px solid #ccc;
   background-color: #f7f6f6;
   padding-top: 32px;
+  padding-bottom: 32px;
   gap: 32px;
 }
 .footer__content {
@@ -107,7 +108,6 @@
   font-size: 14px;
   font-weight: 500;
   color: #888888;
-  margin-top: 12px;
 }
 .footer__social-icons {
   display: flex;
@@ -124,6 +124,7 @@
   justify-content: center;
   font-size: 12px;
   align-self: center;
+  gap: 16px;
 }
 .footer__subscribe input {
   text-align: center;
@@ -132,7 +133,6 @@
   color: #c4c4c4;
   width: 268px;
   height: 46px;
-  margin-top: 16px;
 }
 .footer__subscribe input::placeholder {
   color: #c4c4c4;
@@ -147,8 +147,6 @@
   background-color: #ded7d769;
   border: none;
   border-radius: 20px;
-  margin-top: 12px;
-  margin-bottom: 32px;
 }
 @media (min-width: 786px) {
   .full-screen {
@@ -212,6 +210,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 39px;
     gap: 150px;
   }
   .footer__content {
@@ -221,6 +220,9 @@
 @media (min-width: 1200px) {
   .full-screen__title {
     margin-top: 63px;
+  }
+  .footer{
+    padding-bottom: 40px;
   }
   .footer__logo-link {
     display: block;
