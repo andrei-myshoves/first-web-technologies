@@ -1,0 +1,57 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 32px;
+}
+.offer__title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.offer__image {
+  display: block;
+  align-items: center;
+  position: relative;
+  width: 343px;
+  height: 226px;
+}
+.offer__icons {
+  display: flex;
+  position: absolute;
+  gap: 10px;
+  width: 24px;
+  height: 24px;
+}
+.offer__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  gap: 9px;
+}
+.offer__text {
+  font-weight: 500;
+  font-size: 18px;
+  color:#000000
+}
+.offer__subtitle {
+display: inline;
+  font-size: 14px;
+  color: #888888;
+}
+.offer__prices {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-right: 32px;
+}
+.price-current {
+  font-weight: 500;
+  font-size: 18px;
+}
+.price-old {
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #888888;
+}
