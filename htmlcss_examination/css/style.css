@@ -82,8 +82,8 @@
   display: flex;
   justify-content: space-between;
 }
-.footer__logo-link{
-  display:none;
+.footer__logo-link {
+  display: none;
 }
 .footer__menu {
   display: flex;
@@ -208,24 +208,24 @@
     font-size: 16px;
     text-align: left;
   }
-  .footer{
+  .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 150px;
   }
-  .footer__content{
-  flex: 1 1 auto;
+  .footer__content {
+    flex: 1 1 auto;
   }
 }
 @media (min-width: 1200px) {
   .full-screen__title {
     margin-top: 63px;
   }
-  .footer__logo-link{
+  .footer__logo-link {
     display: block;
   }
-  .footer__logo-img{
+  .footer__logo-img {
     width: 144px;
     height: 44px;
   }
