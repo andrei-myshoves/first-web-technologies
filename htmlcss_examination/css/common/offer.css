@@ -1,6 +1,7 @@
 .offer {
   display: flex;
   flex-direction: column;
+  border: none;
   padding-top: 32px;
   padding-bottom: 32px;
   gap: 32px;
@@ -9,19 +10,23 @@
   font-weight: 600;
   font-size: 24px;
 }
-.offer__image {
+.offer__card-header {
+  position: relative;
+}
+.offer__card-image {
   display: block;
   align-items: center;
-  position: relative;
   width: 343px;
   height: 226px;
 }
-.offer__icons {
+.offer__card-icons {
   display: flex;
   position: absolute;
-  gap: 10px;
+  top: 10px;
+  left: 272px;
   width: 24px;
   height: 24px;
+  gap: 10px;
 }
 .offer__content {
   display: flex;
@@ -32,10 +37,10 @@
 .offer__text {
   font-weight: 500;
   font-size: 18px;
-  color:#000000
+  color: #000000;
 }
 .offer__subtitle {
-display: inline;
+  display: inline;
   font-size: 14px;
   color: #888888;
 }
