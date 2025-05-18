@@ -27,7 +27,16 @@
   width: 24px;
   height: 24px;
   gap: 10px;
+  cursor: pointer;
+}
+.offer__card-icons img{
   opacity: 0.2;
+}
+.offer__card-icons img{
+  transition: opacity 0.3s ease-in-out;
+}
+.offer__card-icons img:hover{
+ opacity: 1;
 }
 .offer__content {
   display: flex;
@@ -47,9 +56,8 @@
 }
 .offer__prices {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
-  padding-right: 32px;
 }
 .price-current {
   font-weight: 500;
