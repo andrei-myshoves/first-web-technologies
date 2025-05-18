@@ -60,3 +60,39 @@
   text-decoration: line-through;
   color: #888888;
 }
+@media (min-width: 786px){
+  .offer__main{
+    display: flex;
+    flex-direction: row;
+    gap: 29px;
+    justify-content: space-between;
+  }
+  .offer__card{
+    display: flex;
+    flex-direction: column;
+  }
+  .offer__card-image{
+    width: 379px;
+    height: 251px;
+  }
+  .offer__card-icons{
+    top: 3px;
+    left: 295px;
+    gap: 21px;
+  }
+  .offer__content{
+    text-align: left;
+    justify-self: flex-start;
+  }
+  .offer__text{
+    font-size: 24px;
+  }
+  .offer__subtitle{
+    display: flex;
+    text-align: left;
+  }
+  .offer__prices{
+    font-size: 24px;
+  }
+ }
+
