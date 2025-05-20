@@ -1,4 +1,4 @@
-.furniture{
+.furniture {
   display: flex;
   flex-direction: column;
   border: none;
@@ -7,6 +7,35 @@
   gap: 32px;
 }
 .furniture__title {
-    font-weight: 600;
-    font-size: 24px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.furniture__card {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  color: #fff;
+}
+.furniture__card:first-child {
+  background-image: url(/htmlcss_examination/img/Rectangle\ 17.jpg);
+  min-height: 100%;
+}
+.furniture__card:nth-child(2) {
+  background-image: url(/htmlcss_examination/img/Rectangle\ 18.jpg);
+  min-height: 100%;
+}
+.furniture__card:nth-child(3) {
+  background-image: url(/htmlcss_examination/img/Rectangle\ 19.jpg);
+  max-height: 100%;
+}
+.furniture__card:nth-child(4) {
+  background-image: url(/htmlcss_examination/img/Rectangle\ 20.jpg);
+  max-height: 100%;
+}
+.furniture__card:last-child {
+  background-image: url(/htmlcss_examination/img/Rectangle\ 21.jpg);
+  max-height: 100%; 
 }
