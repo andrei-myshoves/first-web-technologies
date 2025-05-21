@@ -62,3 +62,14 @@
     grid-column: span 4;
   }
 }
+@media (min-width: 1200px) {
+  .furniture__card {
+    width: 379px;
+    height: 415px;
+  }
+  .furniture__card:nth-child(1),
+  .furniture__card:nth-child(2) {
+    width: 583px;
+    height: 415px;
+  }
+}
