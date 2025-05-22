@@ -1,0 +1,63 @@
+.hab {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 32px;
+}
+.hab__title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.hab__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hab__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  color: #fff;
+  width: 100%;
+  height: 374px;
+}
+.hab__card:nth-child(1) {
+  background: url(/htmlcss_examination/img/chill.jpg) no-repeat center/cover;
+  height: 243px;
+}
+.hab__card:nth-child(2) {
+  background: url(/htmlcss_examination/img/work.jpg) no-repeat center/cover;
+  height: 243px;
+}
+.hab__card:nth-child(3) {
+  background: url(/htmlcss_examination/img/kitchen.jpg) no-repeat center/cover;
+}
+.hab__card:nth-child(4) {
+  background: url(/htmlcss_examination/img/children-room.jpg) no-repeat center/cover;
+}
+.hab__card:nth-child(5) {
+  background: url(/htmlcss_examination/img/bathroom.jpg) no-repeat center/cover;
+}
+@media (min-width: 786px) {
+  .hab__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  .hab__card {
+    height: 265px;
+    grid-column: span 4;
+  }
+  .hab__card:nth-child(1),
+  .hab__card:nth-child(2) {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1200px) {
+  .hab__card {
+    height: 415px;
+  }
+}
