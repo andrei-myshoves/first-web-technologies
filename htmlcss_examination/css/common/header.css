@@ -1,9 +1,12 @@
 .header {
   display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: space-between;
-  padding-top: 17.5px;
-  padding-bottom: 17.5px;
+  padding: 17.5px 16px 0px;
 }
 .header__logo {
   width: 99px;
@@ -24,7 +27,7 @@
 }
 @media (min-width: 786px) {
   .header {
-    padding: 25px 0;
+    padding: 25px;
     border-bottom: 0.5px solid white;
   }
   .header__logo {
@@ -38,7 +41,6 @@
     display: none;
   }
   .header__nav {
-    gap: 30px;
     align-items: center;
   }
   .header__search-input {
