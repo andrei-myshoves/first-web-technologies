@@ -25,21 +25,21 @@
   height: 374px;
 }
 .furniture__card:nth-child(1) {
-  background: url(/htmlcss_examination/img/Rectangle\ 17.jpg)no-repeat center/cover;
+  background: url(/htmlcss_examination/img/chill.jpg)no-repeat center/cover;
   height: 243px;
 }
 .furniture__card:nth-child(2) {
-  background: url(/htmlcss_examination/img/Rectangle\ 18.jpg)no-repeat center/cover;
+  background: url(/htmlcss_examination/img/work.jpg)no-repeat center/cover;
   height: 243px;
 }
 .furniture__card:nth-child(3) {
-  background: url(/htmlcss_examination/img/Rectangle\ 19.jpg)no-repeat center/cover;
+  background: url(/htmlcss_examination/img/kitchen.jpg)no-repeat center/cover;
 }
 .furniture__card:nth-child(4) {
-  background: url(/htmlcss_examination/img/Rectangle\ 20.jpg)no-repeat center/cover;
+  background: url(/htmlcss_examination/img/children-room.jpg)no-repeat center/cover;
 }
 .furniture__card:nth-child(5) {
-  background: url(/htmlcss_examination/img/Rectangle\ 21.jpg)no-repeat center/cover;
+  background: url(/htmlcss_examination/img/bathroom.jpg)no-repeat center/cover;
 }
 @media (min-width: 786px) {
   .furniture__list {
