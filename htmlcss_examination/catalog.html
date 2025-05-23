@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <title>Экзамен</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="css/common/reset.css" />
+    <link rel="stylesheet" href="css/common/container.css" />
+    <link rel="stylesheet" href="css/common/header.css" />
+    <link rel="stylesheet" href="css/common/footer.css" />
+    <link rel="stylesheet" href="css/common/offer.css" />
+
+    <!-- Styles to main page -->
+    <link rel="stylesheet" href="css/main-page/full-screen.css" />
+    <link rel="stylesheet" href="css/main-page/half-screen.css" />
+    <link rel="stylesheet" href="css/main-page/hab.css" />
+
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  </head>
+
+  <body class="body">
+    <header class="header container">
+      <div class="header__logo">
+        <a href="/">
+          <img class="header__logo-img" src="./img/logo/logo.svg" alt="Логотип" />
+        </a>
+      </div>
+      <input type="text" class="header__search-input search-input" placeholder="Поиск..." />
+      <nav class="header__nav">
+        <a href="/" class="header__nav-link">
+          <img src="./img/icons/search.svg" alt="Поиск" />
+        </a>
+        <a href="/" class="header__nav-link">
+          <img src="./img/icons/menu.svg" alt="Меню" />
+          <span class="header__nav-text">Меню</span>
+        </a>
+        <a href="/" class="header__nav-link">
+          <img src="./img/icons/cart.svg" alt="Каталог" />
+          <span class="header__nav-text">Каталог</span>
+        </a>
+      </nav>
+    </header>
+    <div class="half-screen container">
+      <div class="full-screen__title">Каталог</div>
+    </div>
+        <footer class="footer container">
+      <div class="footer__content">
+        <a class="footer__logo-link" href="/">
+          <img class="footer__logo-img" src="./img/logo/logo-black.svg" alt="Логотип" />
+        </a>
+        <div class="footer__menu">
+          <h2>Меню</h2>
+          <ul class="footer__menu-list">
+            <li><a href="/" class="footer__content-list">Главная</a></li>
+            <li><a href="/" class="footer__content-list">Каталог</a></li>
+            <li><a href="/" class="footer__content-list">Корзина</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h2>Контакты</h2>
+          <a href="tel:+79088008080" class="footer__content-list link">+7 908 800 80 80</a>
+          <a href="/" class="footer__content-list link">help@interier.com</a>
+          <div class="footer__social-icons">
+            <a href="/" class="footer__social-icon-link"
+              ><img class="footer__social-icon-img" src="./img/socials/instagram.svg" alt="Instagram"
+            /></a>
+            <a href="/" class="footer__social-icon-link"
+              ><img class="footer__social-icon-img" src="./img/socials/twitter.svg" alt="Twitter"
+            /></a>
+            <a href="/" class="footer__social-icon-link"
+              ><img class="footer__social-icon-img" src="./img/socials/facebook.svg" alt="Facebook"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__subscribe">
+        <span>Получайте наши новости и обновления</span>
+        <input class="footer__subscribe-input" type="email" placeholder="Email Address" required />
+        <button class="footer__subscribe-button" type="submit">Подписаться</button>
+      </div>
+    </footer>
+  </body>
+</html>

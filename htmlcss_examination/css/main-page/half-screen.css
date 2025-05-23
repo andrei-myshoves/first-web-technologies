@@ -1,0 +1,7 @@
+.half-screen{
+  min-height: 100svh;
+  background: url(../../img/half-screen.png) no-repeat center / cover;
+  padding-top: 120px;
+  text-align: center;
+  overflow: hidden;
+}
