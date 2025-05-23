@@ -83,6 +83,7 @@
 
   /* Styles to common body */
 .body {
+  position: relative;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #000000;

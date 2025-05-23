@@ -1,7 +1,8 @@
 .full-screen {
   min-height: 100svh;
   background: url(../../img/head\ 15.png) no-repeat center / cover;
-  padding-top: 32px;
+  padding-top: 120px;
+  text-align: center;
 }
 .full-screen__title {
   color: #ffffff;
@@ -28,9 +29,6 @@
   margin-top: 16px;
 }
 @media (min-width: 786px) {
-  .full-screen {
-    padding-top: 0;
-  }
   .full-screen__title {
     font-size: 64px;
     line-height: 70px;
