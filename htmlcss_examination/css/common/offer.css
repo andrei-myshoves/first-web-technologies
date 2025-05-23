@@ -78,6 +78,15 @@
   gap: 29px;
   justify-content: space-between;
 }
+.down__link{
+  display: block;
+  color:black;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-style: solid;
+}
 @media (min-width: 786px) {
   .offer__title {
     font-size: 48px;
@@ -113,5 +122,11 @@
   .offer__prices {
     align-items: normal;
     font-size: 24px;
+  }
+  .down__link{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: left;
   }
 }
