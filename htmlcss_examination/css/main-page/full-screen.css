@@ -29,9 +29,6 @@
   margin-top: 16px;
 }
 @media (min-width: 786px) {
-  .full-screen {
-    padding-top: 120px;
-  }
   .full-screen__title {
     font-size: 64px;
     line-height: 70px;
