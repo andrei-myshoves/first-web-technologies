@@ -78,9 +78,9 @@
   gap: 29px;
   justify-content: space-between;
 }
-.offer__cart-link{
+.offer__cart-link {
   display: block;
-  color:black;
+  color: black;
   text-decoration: underline;
   font-size: 14px;
   line-height: 24px;
@@ -122,11 +122,5 @@
   .offer__prices {
     align-items: normal;
     font-size: 24px;
-  }
-  .offer__cart-link{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    align-items: left;
   }
 }
