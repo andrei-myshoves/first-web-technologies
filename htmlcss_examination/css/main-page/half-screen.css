@@ -1,7 +1,7 @@
 .half-screen {
   min-height: 50vh;
   background: url(../../img/half-screen.png) no-repeat center top / cover;
-  padding-top: 120px;
+  padding-top: 185px;
   text-align: center;
 }
 .half-screen__title {
@@ -15,11 +15,5 @@
     font-size: 64px;
     line-height: 70px;
     text-align: left;
-    margin-top: 64px;
-  }
-}
-@media (min-width: 1200px) {
-  .half-screen__title {
-    margin-top: 63px;
   }
 }
