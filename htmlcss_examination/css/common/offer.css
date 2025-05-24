@@ -78,7 +78,7 @@
   gap: 29px;
   justify-content: space-between;
 }
-.down__link{
+.offer__cart-link{
   display: block;
   color:black;
   text-decoration: underline;
@@ -123,7 +123,7 @@
     align-items: normal;
     font-size: 24px;
   }
-  .down__link{
+  .offer__cart-link{
     display: flex;
     flex-direction: row;
     text-align: left;
