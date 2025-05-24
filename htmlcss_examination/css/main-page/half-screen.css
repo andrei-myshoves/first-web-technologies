@@ -1,5 +1,5 @@
 .half-screen {
-  min-height: 50vh;
+  min-height: 50svh;
   background: url(../../img/half-screen.png) no-repeat center top / cover;
   padding-top: 185px;
   text-align: center;
