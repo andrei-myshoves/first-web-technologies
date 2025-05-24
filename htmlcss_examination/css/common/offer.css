@@ -78,6 +78,14 @@
   gap: 29px;
   justify-content: space-between;
 }
+.offer__cart-link {
+  display: block;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+}
 @media (min-width: 786px) {
   .offer__title {
     font-size: 48px;
