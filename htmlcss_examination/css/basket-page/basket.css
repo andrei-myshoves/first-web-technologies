@@ -6,8 +6,8 @@
 }
 .basket-main__half-screen {
   min-height: 50svh;
+  background: url(../../img/basket-head.jpg)no-repeat center top / cover;
   padding-top: 185px;
   text-align: center;
-  background: url(../../img/basket-head.png)no-repeat center top / cover;
   width: 100%;
 }
