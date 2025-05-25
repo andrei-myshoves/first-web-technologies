@@ -17,9 +17,52 @@
 .breadcrumbs__link:last-child::after {
   display: none;
 }
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  padding: 10px 18px;
+  margin-top: 16px;
+  background: transparent;
+}
+
+.custom-select select {
+  font-size: 14px;
+  padding-right: 24px;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+.custom-select img{
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+}
+
 @media (min-width: 786px) {
+  .breadcrumbs-select{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+  }
   .breadcrumbs {
     font-size: 16px;
     line-height: 24px;
+  }
+  .custom-select {
+    font-size: 16px;
+    margin: 0px;
+  }
+  .custom-select::after{
+    padding-right: 28px;
   }
 }
