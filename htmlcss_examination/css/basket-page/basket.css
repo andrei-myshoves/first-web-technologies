@@ -1,0 +1,13 @@
+.basket-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.basket-main__half-screen {
+  min-height: 50svh;
+  background: url(../../img/basket-head.jpg)no-repeat center top / cover;
+  padding-top: 185px;
+  text-align: center;
+  width: 100%;
+}
