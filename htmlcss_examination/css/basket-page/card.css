@@ -1,0 +1,60 @@
+.card {
+  display: block;
+  padding: 20px;
+  line-height: 100%;
+}
+.card__items {
+  display: flex;
+  flex-direction: column;
+}
+.card__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  border-top: 1px solid #cacdd8;
+  gap: 10px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+.card__title {
+  font-weight: 500;
+}
+.card__subtitle {
+  font-size: 12px;
+  color: #888888;
+}
+.card__price {
+  font-size: 12px;
+  font-weight: 500;
+  color: #050505;
+}
+.card__actions {
+  display: flex;
+  column-gap: 25px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.card__link {
+  color: #000000;
+}
+.card__control {
+  position: absolute;
+  left: 295px;
+  display: flex;
+  align-items: center;
+  color:#000000;
+  left: 288px;
+}
+.card__control input {
+  width: 71px;
+  height: 51px;
+  text-align: center;
+  background-color: #f7f6f6;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.card__control-icon {
+  left: 25px;
+}
