@@ -1,13 +1,4 @@
-.card {
-  display: block;
-  padding: 20px;
-  line-height: 100%;
-}
-.card__items {
-  display: flex;
-  flex-direction: column;
-}
-.card__item {
+.raw-card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -29,32 +20,26 @@
   font-weight: 500;
   color: #050505;
 }
-.card__actions {
+.raw-card__actions {
   display: flex;
+  cursor: pointer;
   column-gap: 25px;
   font-size: 14px;
-  text-decoration: underline;
-}
-.card__link {
   color: #000000;
 }
-.card__control {
-  position: absolute;
-  left: 295px;
-  display: flex;
-  align-items: center;
-  color:#000000;
-  left: 288px;
+.raw-card__actions span:hover {
+  border-bottom: 1px solid #000000;
 }
-.card__control input {
+.raw-icon__input {
+  position: absolute;
+  top: 10px;
+  left: 288px;
   width: 71px;
   height: 51px;
-  text-align: center;
-  background-color: #f7f6f6;
+  font-weight: 600;
   border: 1px solid #ddd;
+  text-align: center;
   border-radius: 6px;
   font-size: 14px;
-}
-.card__control-icon {
-  left: 25px;
+  background-color: #f7f6f6;
 }
