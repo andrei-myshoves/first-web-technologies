@@ -13,6 +13,7 @@
 }
 .card__subtitle {
   font-size: 12px;
+  max-width: 100%;
   color: #888888;
 }
 .card__price {
