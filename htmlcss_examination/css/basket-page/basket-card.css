@@ -1,3 +1,8 @@
+.basket__raw-card-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .raw-card {
   display: flex;
   flex-wrap: wrap;
@@ -5,18 +10,20 @@
   position: relative;
   border-top: 1px solid #cacdd8;
   gap: 10px;
-  padding-top: 16px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 24px;
 }
-.card__title {
+.raw-card__title {
   font-weight: 500;
 }
-.card__subtitle {
+.raw-card__subtitle {
   font-size: 12px;
-  max-width: 100%;
+  max-width: 70%;
   color: #888888;
 }
-.card__price {
+.raw-card__price {
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 12px;
   font-weight: 500;
   color: #050505;
@@ -31,7 +38,7 @@
 .raw-card__actions span:hover {
   border-bottom: 1px solid #000000;
 }
-.raw-icon__input {
+.raw-card__number-input {
   position: absolute;
   top: 10px;
   left: 288px;
