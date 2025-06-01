@@ -1,4 +1,4 @@
-.basket__raw-card-list{
+.basket__raw-card-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -50,4 +50,23 @@
   border-radius: 6px;
   font-size: 14px;
   background-color: #f7f6f6;
+}
+.basket__raw-card-offer {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+}
+.raw-card-offer__button {
+  width: 166px;
+  height: 37px;
+  border: 1px solid #000;
+  color: #000;
+  background-color: transparent;
+  font-size: 12px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.raw-card-offer__button:hover {
+  color: #f7f6f6;
+  background-color: #000;
 }
