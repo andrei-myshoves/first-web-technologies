@@ -3,6 +3,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+.basket__raw-card-text {
+  display: none;
+}
 .raw-card {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +15,9 @@
   gap: 10px;
   padding-top: 20px;
   padding-bottom: 24px;
+}
+.raw-card__img {
+  display: none;
 }
 .raw-card__title {
   font-weight: 500;
@@ -69,4 +75,18 @@
 .raw-card-offer__button:hover {
   color: #f7f6f6;
   background-color: #000;
+}
+@media (min-width: 786px) {
+  .basket__raw-card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .raw-card__img {
+    display: flex;
+    max-width: 25%;
+  }
 }
