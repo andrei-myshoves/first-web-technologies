@@ -13,10 +13,10 @@
 }
 .basket__raw-card-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
-.basket__raw-card-text {
+.raw-card-list__header {
   display: none;
 }
 .raw-card {
@@ -72,12 +72,12 @@
   font-size: 14px;
   background-color: #f7f6f6;
 }
-.basket__raw-card-offer {
+.raw-card-list__offer-buttons {
   display: flex;
   gap: 12px;
   padding-top: 16px;
 }
-.raw-card-offer__button {
+.raw-card-list__offer-button {
   width: 166px;
   height: 37px;
   border: 1px solid #000;
@@ -87,12 +87,8 @@
   border-radius: 50px;
   transition: 0.2s;
 }
-.raw-card-offer__button:hover {
-  color: #f7f6f6;
-  background-color: #000;
-}
 @media (min-width: 786px) {
-  .basket__raw-card-text {
+  .raw-card-list__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -100,8 +96,15 @@
     font-size: 16px;
     line-height: 100%;
   }
-  .raw-card__img {
+  .raw-card {
     display: flex;
+  }
+  .raw-card__img {
+    display: block;
     max-width: 25%;
+  }
+  .raw-card-list__offer-button:hover {
+    color: #f7f6f6;
+    background-color: #000;
   }
 }

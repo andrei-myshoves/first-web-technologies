@@ -50,27 +50,27 @@
         <div class="half-screen__title">Корзина</div>
       </section>
       <section class="basket container">
-        <div class="basket__raw-card-text">
-          <span>Товар</span>
-          <span>Кл-во</span>
-        </div>
-        <div class="basket__raw-card-list">
-          <div class="basket__raw-card raw-card">
-            <img class="raw-card__img" src="./img/Menu-basket.jpg" alt="Table Menu" />
-            <div class="raw-card__title">Стол MENU</div>
-            <p class="raw-card__subtitle">
-              Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.
-            </p>
-            <span class="raw-card__price">34 000 руб.</span>
-            <div class="raw-card__actions">
-              <span>Избранные</span>
-              <span>Удалить</span>
-            </div>
-            <input class="raw-card__number-input" type="number" min="1" value="1" />
+        <div class="basket__raw-card-list raw-card-list">
+          <div class="raw-card-list__header">
+            <span>Товар</span>
+            <span>Кл-во</span>
           </div>
-          <div class="basket__raw-card raw-card">
+          <div class="raw-card-list__raw-card raw-card">
+              <img class="raw-card__img" src="./img/Menu-basket.jpg" alt="Table Menu" />
+              <h3 class="raw-card__title">Стол MENU</h3>
+              <p class="raw-card__subtitle">
+                Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.
+              </p>
+              <span class="raw-card__price">34 000 руб.</span>
+              <div class="raw-card__actions">
+                <span>Избранные</span>
+                <span>Удалить</span>
+              </div>
+              <input class="raw-card__number-input" type="number" min="1" value="1" />
+          </div>
+          <div class="raw-card-list__raw-card raw-card">
             <img class="raw-card__img" src="./img/Rastan-basket.jpg" alt="Sofa Rastan" />
-            <div class="raw-card__title">Диван NASTAN</div>
+            <h3 class="raw-card__title">Диван NASTAN</h3>
             <p class="raw-card__subtitle">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
             <span class="raw-card__price">80 000 руб.</span>
             <div class="raw-card__actions">
@@ -79,9 +79,9 @@
             </div>
             <input class="raw-card__number-input" type="number" min="1" value="1" />
           </div>
-          <div class="basket__raw-card-offer">
-            <button class="raw-card-offer__button">Очистить корзину</button>
-            <button class="raw-card-offer__button">Продолжить покупки</button>
+          <div class="raw-card-list__offer-buttons">
+            <button class="raw-card-list__offer-button offer-button">Очистить корзину</button>
+            <button class="raw-card-list__offer-button offer-button">Продолжить покупки</button>
           </div>
         </div>
       </section>
