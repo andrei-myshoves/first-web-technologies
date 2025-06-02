@@ -5,9 +5,103 @@
   margin-bottom: 32px;
 }
 .basket-main__half-screen {
-  background: url(../../img/basket-head.jpg)no-repeat center top / cover;
+  background: url(../../img/basket-head.jpg) no-repeat center top / cover;
   min-height: 50svh;
   padding-top: 185px;
   text-align: center;
   width: 100%;
+}
+.basket__raw-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.basket__raw-card-text {
+  display: none;
+}
+.raw-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  border-top: 1px solid #cacdd8;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+.raw-card__img {
+  display: none;
+}
+.raw-card__title {
+  font-weight: 500;
+}
+.raw-card__subtitle {
+  font-size: 12px;
+  max-width: 70%;
+  color: #888888;
+}
+.raw-card__price {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #050505;
+}
+.raw-card__actions {
+  display: flex;
+  column-gap: 25px;
+  font-size: 14px;
+  color: #000000;
+}
+.raw-card__actions span {
+  cursor: pointer;
+}
+.raw-card__actions span:hover {
+  text-decoration: underline;
+}
+.raw-card__number-input {
+  position: absolute;
+  top: 10px;
+  left: 288px;
+  width: 71px;
+  height: 51px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f7f6f6;
+}
+.basket__raw-card-offer {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+}
+.raw-card-offer__button {
+  width: 166px;
+  height: 37px;
+  border: 1px solid #000;
+  color: #000;
+  background-color: transparent;
+  font-size: 12px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.raw-card-offer__button:hover {
+  color: #f7f6f6;
+  background-color: #000;
+}
+@media (min-width: 786px) {
+  .basket__raw-card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .raw-card__img {
+    display: flex;
+    max-width: 25%;
+  }
 }
