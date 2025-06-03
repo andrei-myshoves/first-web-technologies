@@ -74,12 +74,18 @@
   font-size: 14px;
   background-color: #f7f6f6;
 }
-.raw-card-list__offer-buttons {
+@media (hover: hover) {
+  .raw-card-list__action-button:hover {
+    color: #f7f6f6;
+    background-color: #000;
+  }
+}
+.raw-card-list__action-buttons {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   padding-top: 16px;
 }
-.raw-card-list__offer-button {
+.action-button {
   width: 166px;
   height: 37px;
   border: 1px solid #000;
@@ -88,4 +94,13 @@
   font-size: 12px;
   border-radius: 50px;
   transition: 0.2s;
+}
+@media (min-width: 786px) {
+  .raw-card-list__action-buttons {
+    gap: 10px;
+  }
+  .action-button {
+    width: 200px;
+    font-size: 14px;
+  }
 }
