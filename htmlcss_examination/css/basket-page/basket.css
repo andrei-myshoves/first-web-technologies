@@ -51,16 +51,20 @@
   font-size: 14px;
   color: #000000;
 }
-.raw-card__actions span {
-  cursor: pointer;
-}
-.raw-card__actions span:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .raw-card__action {
+    cursor: pointer;
+  }
+  .raw-card__action:hover {
+    text-decoration: underline;
+  }
 }
 .raw-card__number-input {
   position: absolute;
   top: 10px;
   right: 15px;
+}
+.number-input {
   width: 71px;
   height: 51px;
   font-weight: 600;
