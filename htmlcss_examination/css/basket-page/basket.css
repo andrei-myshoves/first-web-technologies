@@ -75,17 +75,17 @@
   background-color: #f7f6f6;
 }
 @media (hover: hover) {
-  .raw-card-list__offer-button:hover {
+  .raw-card-list__action-button:hover {
     color: #f7f6f6;
     background-color: #000;
   }
 }
-.raw-card-list__offer-buttons {
+.raw-card-list__action-buttons {
   display: flex;
   gap: 20px;
   padding-top: 16px;
 }
-.offer-button {
+.action-button {
   width: 166px;
   height: 37px;
   border: 1px solid #000;
@@ -96,10 +96,10 @@
   transition: 0.2s;
 }
 @media (min-width: 786px) {
-  .raw-card-list__offer-buttons {
+  .raw-card-list__action-buttons {
     gap: 10px;
   }
-  .offer-button {
+  .action-button {
     width: 200px;
     font-size: 14px;
   }
