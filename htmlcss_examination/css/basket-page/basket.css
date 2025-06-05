@@ -14,6 +14,7 @@
 .basket__raw-card-list {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 .raw-card-list__header {
   display: none;
@@ -23,14 +24,15 @@
   flex-direction: column;
   position: relative;
   border-top: 1px solid #cacdd8;
-  gap: 10px;
-  padding-top: 20px;
-  padding-bottom: 24px;
+}
+.raw-card:last-child{
+  margin-bottom: 8px;
 }
 .raw-card-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin-top: 18px;
+  gap: 8px;
 }
 .raw-card__img {
   display: none;
@@ -42,9 +44,9 @@
   font-size: 12px;
   max-width: 253px;
   color: #888888;
+  margin-bottom: 7px;
 }
 .raw-card__price {
-  padding-top: 15px;
   padding-bottom: 15px;
   font-size: 12px;
   font-weight: 500;
@@ -52,11 +54,12 @@
 }
 .raw-card__actions {
   display: flex;
-  column-gap: 25px;
+  column-gap: 30px;
   font-size: 14px;
   color: #000000;
+  margin-bottom: 24px;
 }
-@media (hover: hover) {
+@media (hover: none)and (pointer: coarse) {
   .raw-card__action {
     cursor: pointer;
   }
@@ -66,8 +69,8 @@
 }
 .raw-card__number-input {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 18px;
+  right: 0px;
 }
 .number-input {
   width: 71px;
@@ -87,8 +90,7 @@
 }
 .raw-card-list__action-buttons {
   display: flex;
-  gap: 20px;
-  padding-top: 16px;
+  gap: 14px;
 }
 .action-button {
   width: 166px;
@@ -112,14 +114,19 @@
   }
   .raw-card {
     flex-direction: row;
-    gap: 20px;
+    gap: 32px;
     align-items: flex-start;
+    margin-bottom: 32px;
   }
   .raw-card__img {
     display: block;
-    width: 173px;
+    margin-top: 25px;
     height: 173px;
-    flex-shrink: 0;
+    flex: 0 0 173px;
+  }
+  .raw-card-content{
+    margin-top: 25px;
+    gap: 15px;
   }
   .raw-card__title {
     font-size: 24px;
@@ -129,6 +136,12 @@
   }
   .raw-card__price {
     font-size: 16px;
+  }
+  .raw-card__number-input{
+    top: 25px;
+  }
+  .raw-card-list__action-buttons{
+    gap: 7px;
   }
   .action-button {
     width: 200px;
