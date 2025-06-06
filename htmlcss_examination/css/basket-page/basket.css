@@ -83,6 +83,14 @@
     color: #f7f6f6;
     background-color: #000;
   }
+  .raw-card__action {
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .raw-card__action:hover {
+    text-decoration: underline;
+  }
 }
 .raw-card-list__action-buttons {
   display: flex;
@@ -130,16 +138,6 @@
   }
   .raw-card__price {
     font-size: 16px;
-  }
-  @media (hover: hover) {
-    .raw-card__action {
-      text-decoration: none;
-      transition: 0.2s;
-      cursor: pointer;
-    }
-    .raw-card__action:hover {
-      text-decoration: underline;
-    }
   }
   .raw-card__number-input {
     top: 25px;
