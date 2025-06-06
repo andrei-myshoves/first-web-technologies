@@ -20,12 +20,18 @@
 }
 .raw-card {
   display: flex;
-  flex-direction: column;
   position: relative;
   border-top: 1px solid #cacdd8;
-  gap: 10px;
-  padding-top: 20px;
-  padding-bottom: 24px;
+  padding-top: 18px;
+  margin-bottom: 32px;
+}
+.raw-card:last-child {
+  margin-bottom: 8px;
+}
+.raw-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .raw-card__img {
   display: none;
@@ -35,34 +41,31 @@
 }
 .raw-card__subtitle {
   font-size: 12px;
-  max-width: 70%;
+  max-width: 253px;
   color: #888888;
+  margin-bottom: 7px;
 }
 .raw-card__price {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   font-size: 12px;
   font-weight: 500;
   color: #050505;
 }
 .raw-card__actions {
   display: flex;
-  column-gap: 25px;
+  column-gap: 30px;
   font-size: 14px;
   color: #000000;
 }
-@media (hover: hover) {
+@media (hover: none) {
   .raw-card__action {
-    cursor: pointer;
-  }
-  .raw-card__action:hover {
     text-decoration: underline;
   }
 }
 .raw-card__number-input {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 18px;
+  right: 0px;
 }
 .number-input {
   width: 71px;
@@ -79,11 +82,18 @@
     color: #f7f6f6;
     background-color: #000;
   }
+  .raw-card__action {
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .raw-card__action:hover {
+    text-decoration: underline;
+  }
 }
 .raw-card-list__action-buttons {
   display: flex;
-  gap: 20px;
-  padding-top: 16px;
+  gap: 14px;
 }
 .action-button {
   width: 166px;
@@ -98,6 +108,40 @@
 @media (min-width: 786px) {
   .raw-card-list__action-buttons {
     gap: 10px;
+  }
+  .raw-card-list__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    font-size: 16px;
+  }
+  .raw-card {
+    gap: 32px;
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+  .raw-card__img {
+    display: block;
+    height: 173px;
+    flex: 0 0 173px;
+  }
+  .raw-card-content {
+    gap: 15px;
+  }
+  .raw-card__title {
+    font-size: 24px;
+  }
+  .raw-card__subtitle {
+    max-width: 276px;
+  }
+  .raw-card__price {
+    font-size: 16px;
+  }
+  .raw-card__number-input {
+    top: 25px;
+  }
+  .raw-card-list__action-buttons {
+    gap: 7px;
   }
   .action-button {
     width: 200px;
