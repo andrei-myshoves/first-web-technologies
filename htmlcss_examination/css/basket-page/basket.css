@@ -11,7 +11,7 @@
   text-align: center;
   width: 100%;
 }
-.basket{
+.basket {
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -95,7 +95,7 @@
   .raw-card__action:hover {
     text-decoration: underline;
   }
-  .basket-form__sumbit-button:hover{
+  .basket-form__sumbit-button:hover {
     color: #f7f6f6;
     background-color: #000;
   }
@@ -114,40 +114,44 @@
   border-radius: 50px;
   transition: 0.2s;
 }
-.basket-form{
+.basket-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 400px;
   padding: 42px 28px;
-  background-color: #F7F6F6;
+  background-color: #f7f6f6;
   border-radius: 20px;
 }
-.basket-form__title{
+.basket-form__title {
   text-align: center;
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 35px;
 }
-.basket-form__input{
+.basket-form__input {
   margin-bottom: 44px;
-  width: 288px;
+  width: 100%;
   font-size: 14px;
   line-height: 100%;
-  border-bottom:1px solid #CACDD8;
+  border-bottom: 1px solid #cacdd8;
   background-color: transparent;
 }
 
-.basket-form__input:last-child{
+.basket-form__input:last-child {
   margin-bottom: 68px;
 }
-.basket-form__sum{
+.basket-form__sum {
   text-align: center;
   font-size: 24px;
   margin-bottom: 18px;
 }
-.basket-form__sum_bold{
+.basket-form__sum_bold {
   font-weight: 500;
 }
-.basket-form__sumbit-button{
-   width: 290px;
+.basket-form__sumbit-button {
+  width: 290px;
   height: 41px;
+  align-items: center;
   border: 1px solid #000;
   color: #000;
   background-color: transparent;
@@ -156,6 +160,9 @@
   transition: 0.2s;
 }
 @media (min-width: 786px) {
+  .basket-form {
+  width: 376px;
+  }
   .raw-card-list__action-buttons {
     gap: 10px;
   }
@@ -196,5 +203,16 @@
   .action-button {
     width: 200px;
     font-size: 14px;
+  }
+}
+@media (min-width: 1248px) {
+  .basket {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 379px;
+  }
+  .basket__raw-card-list{
+    width: 786px;
   }
 }
