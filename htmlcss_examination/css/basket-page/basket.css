@@ -117,7 +117,9 @@
 .basket-form {
   display: flex;
   flex-direction: column;
-  flex: 1 0 400px;
+  align-items: center;
+  width: 343px;
+  height: 556px;
   padding: 42px 28px;
   background-color: #f7f6f6;
   border-radius: 20px;
@@ -148,10 +150,9 @@
 .basket-form__sum_bold {
   font-weight: 500;
 }
-.basket-form__sumbit-button {
+.basket-form__submit-button {
   width: 290px;
   height: 41px;
-  align-items: center;
   border: 1px solid #000;
   color: #000;
   background-color: transparent;
@@ -161,7 +162,7 @@
 }
 @media (min-width: 786px) {
   .basket-form {
-  width: 376px;
+    width: 376px;
   }
   .raw-card-list__action-buttons {
     gap: 10px;
@@ -204,15 +205,23 @@
     width: 200px;
     font-size: 14px;
   }
+  .basket-form__submit-button {
+    align-items: center;
+  }
 }
 @media (min-width: 1248px) {
   .basket {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 379px;
+    gap: 40px;
+    width: 100%;
   }
-  .basket__raw-card-list{
-    width: 786px;
+  .basket__raw-card-list {
+    flex: 1 1 60%;
+  }
+  .basket-form {
+    width: 379px;
+    height: 556px;
   }
 }
