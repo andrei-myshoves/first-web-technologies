@@ -118,8 +118,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 343px;
-  height: 556px;
+  width: 100%;
+  max-width: 343px;
+  flex: 1 0 556px;
   padding: 42px 28px;
   background-color: #f7f6f6;
   border-radius: 20px;
@@ -138,7 +139,6 @@
   border-bottom: 1px solid #cacdd8;
   background-color: transparent;
 }
-
 .basket-form__input:last-child {
   margin-bottom: 68px;
 }
@@ -161,9 +161,6 @@
   transition: 0.2s;
 }
 @media (min-width: 786px) {
-  .basket-form {
-    width: 376px;
-  }
   .raw-card-list__action-buttons {
     gap: 10px;
   }
@@ -211,7 +208,6 @@
 }
 @media (min-width: 1248px) {
   .basket {
-    display: flex;
     justify-content: space-between;
     flex-direction: row;
     gap: 40px;
@@ -221,7 +217,6 @@
     flex: 1 1 60%;
   }
   .basket-form {
-    width: 379px;
-    height: 556px;
+    flex: 1 1 40%;
   }
 }
