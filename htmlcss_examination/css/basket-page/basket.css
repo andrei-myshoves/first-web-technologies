@@ -155,7 +155,7 @@
   .raw-card__action:hover {
     text-decoration: underline;
   }
-  .basket-form__sumbit-button:hover {
+  .basket-form__submit-button:hover {
     color: #f7f6f6;
     background-color: #000;
   }
