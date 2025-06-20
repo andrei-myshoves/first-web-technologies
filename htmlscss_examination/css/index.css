@@ -69,26 +69,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-body {
-  position: relative;
-  font-family: "Play", sans-serif;
-  color: #ffffff;
-  background-color: black;
-  font-size: 21px;
-}
-
 .container {
-  /* margin: 0 auto; */
   padding: 0px 16px;
 }
 
-@media (min-width: 834px) {
+@media (min-width: 1158px) {
   .container {
     padding: 0 24px;
   }
 }
-@media (min-width: 1248px) {
+@media (min-width: 1638px) {
   .container {
-    padding: 0 calc(50% - 400px);
+    padding: 0 calc(50% - 555px);
   }
+  .header-container {
+    padding: 0 calc(50% - 795px);
+  }
+}
+body {
+  position: relative;
+  font-family: "Play", sans-serif;
+  background: #000;
+  color: #ffffff;
+  font-size: 21px;
+  margin: 20px;
 }
