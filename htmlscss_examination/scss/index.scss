@@ -19,16 +19,16 @@ body {
   padding-top: 17px;
   padding-bottom: 17px;
 
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0px;
-  //   width: calc(100% + 32px);
-  //   height: 1px;
-  //   background-color: #ffffff;
-  //   transform: translateX(-16px);
-  // }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: calc(100% + 32px);
+    height: 1px;
+    background-color: #ffffff;
+    transform: translateX(-16px);
+  }
   &__logo {
     width: 175px;
     height: 24px;
@@ -71,15 +71,12 @@ body {
     padding-bottom: 33px;
     &__logo {
       width: 175px;
-      padding-bottom: 0;
-    }
-    &__nav {
-      display: flex;
     }
     &__nav-list {
       display: flex;
       gap: 47px;
       justify-content: space-between;
+			align-items: center;
     }
     &__nav-list-element {
       font-size: 16px;
@@ -89,6 +86,13 @@ body {
     }
     &__menu-text {
       font-size: 16px;
+    }
+  }
+}
+@media (min-width: 1116px) {
+  .header {
+    &__nav {
+      display: block;
     }
   }
 }

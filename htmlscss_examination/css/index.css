@@ -109,6 +109,16 @@ body {
   padding-top: 17px;
   padding-bottom: 17px;
 }
+.header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: calc(100% + 32px);
+  height: 1px;
+  background-color: #ffffff;
+  transform: translateX(-16px);
+}
 .header__logo {
   width: 175px;
   height: 24px;
@@ -145,15 +155,12 @@ body {
   }
   .header__logo {
     width: 175px;
-    padding-bottom: 0;
-  }
-  .header__nav {
-    display: flex;
   }
   .header__nav-list {
     display: flex;
     gap: 47px;
     justify-content: space-between;
+    align-items: center;
   }
   .header__nav-list-element {
     font-size: 16px;
@@ -163,5 +170,10 @@ body {
   }
   .header__menu-text {
     font-size: 16px;
+  }
+}
+@media (min-width: 1116px) {
+  .header__nav {
+    display: block;
   }
 }
