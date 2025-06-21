@@ -92,7 +92,6 @@ body {
   background: #000;
   color: #ffffff;
   font-size: 21px;
-  margin: 20px;
 }
 
 .header {
@@ -103,8 +102,8 @@ body {
   left: 0;
   justify-content: space-between;
   align-items: center;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 .header:after {
   content: "";
@@ -121,14 +120,14 @@ body {
   height: 24px;
   color: #ffffff;
   flex-shrink: 0;
+  padding-bottom: 16px;
 }
 .header__logo-img {
   width: 100%;
   height: 100%;
 }
-.header__nav-list {
-  display: flex;
-  gap: 47px;
+.header__nav {
+  display: none;
 }
 .header__nav-list-element {
   font-size: 16px;
@@ -138,10 +137,38 @@ body {
 }
 .header__menu {
   display: flex;
-  gap: 70px;
+  gap: 24px;
 }
 .header__menu-text {
   font-family: "Cinzel";
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media (min-width: 1158px) {
+  .header {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  .header__logo {
+    width: 175px;
+    padding-bottom: 0;
+  }
+  .header__nav {
+    display: flex;
+  }
+  .header__nav-list {
+    display: flex;
+    gap: 47px;
+    justify-content: space-between;
+  }
+  .header__nav-list-element {
+    font-size: 16px;
+  }
+  .header__menu {
+    gap: 70px;
+  }
+  .header__menu-text {
+    font-size: 16px;
+  }
 }
