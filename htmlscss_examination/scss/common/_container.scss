@@ -1,16 +1,20 @@
-.container {
+.container,
+.header-container {
   padding: 0px 16px;
 }
-@media (min-width: 1158px) {
-  .container {
+@media (min-width: 800px) {
+  .container,
+  .header-container {
     padding: 0 24px;
   }
 }
-@media (min-width: 1638px) {
+@media (min-width: 1152px) {
   .container {
-    padding: 0 calc(50% - 555px);
+    padding: 0 calc(50% - 560px);
   }
+}
+@media (min-width: 1608px) {
   .header-container {
-    padding: 0 calc(50% - 795px);
+    padding: 0 calc(50% - 780px);
   }
 }
