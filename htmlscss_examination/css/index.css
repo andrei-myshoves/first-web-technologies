@@ -177,3 +177,97 @@ body {
     display: block;
   }
 }
+.full-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  min-height: 100vh;
+  text-align: center;
+  background: url("../img/fullscreen-img/full-screen.jpg") no-repeat center/cover;
+}
+.full-screen__text-preview {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+.full-screen__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.full-screen__subtitle {
+  font-size: 16px;
+}
+.full-screen__link {
+  display: inline-block;
+  position: relative;
+  margin-top: 12px;
+  padding-right: 20px;
+  font-family: "Cinzel";
+  font-size: 16px;
+  color: #ffffff;
+}
+.full-screen__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: url("../img/icons/arrow-white.svg") no-repeat center/contain;
+}
+.full-screen__content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 255px;
+  height: 148px;
+  padding: 16px;
+}
+.preview-card:nth-child(1) {
+  background-color: #3d7cc9;
+}
+.preview-card:nth-child(2) {
+  background-color: #4bb34b;
+}
+.preview-card:nth-child(3) {
+  background-color: #ffd54f;
+  color: #000;
+}
+.preview-card:nth-child(4) {
+  background-color: #e53935;
+}
+.preview-card__title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.preview-card__link {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  text-decoration: underline;
+  padding-right: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.preview-card__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: url("../img/icons/arrow-white.svg") no-repeat center/contain;
+}
