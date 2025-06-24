@@ -178,27 +178,35 @@ body {
   }
 }
 .full-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
   min-height: 100vh;
-  text-align: center;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+}
+.full-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: url("../img/fullscreen-img/full-screen.jpg") no-repeat center/cover;
+  z-index: -1;
 }
 .full-screen__text-preview {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   min-width: 100%;
+  padding-bottom: 25px;
 }
 .full-screen__title {
   font-size: 30px;
   font-weight: 700;
-  text-transform: uppercase;
   color: #ffffff;
+  padding-bottom: 40px;
 }
 .full-screen__subtitle {
   font-size: 16px;
+  padding-bottom: 25px;
 }
 .full-screen__link {
   display: inline-block;
@@ -230,22 +238,23 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
-  width: 255px;
-  height: 148px;
+  width: 100%;
+  max-width: 423px;
+  height: 98px;
   padding: 16px;
 }
 .preview-card:nth-child(1) {
-  background-color: #3d7cc9;
+  background-color: #2378fc;
 }
 .preview-card:nth-child(2) {
-  background-color: #4bb34b;
+  background-color: #30bcc9;
 }
 .preview-card:nth-child(3) {
-  background-color: #ffd54f;
+  background-color: #ffc41e;
   color: #000;
 }
 .preview-card:nth-child(4) {
-  background-color: #e53935;
+  background-color: #f6404f;
 }
 .preview-card__title {
   font-size: 16px;
@@ -270,4 +279,30 @@ body {
   width: 14px;
   height: 14px;
   background: url("../img/icons/arrow-white.svg") no-repeat center/contain;
+}
+
+@media (min-width: 768px) {
+  .full-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding: 120px 80px;
+  }
+  .full-screen__text-preview {
+    max-width: 20%;
+    margin-bottom: 0;
+  }
+  .full-screen__content-block {
+    display: grid;
+    max-width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .preview-card {
+    width: 255px;
+    height: 148px;
+    padding: 16px;
+  }
 }
