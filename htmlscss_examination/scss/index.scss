@@ -98,7 +98,8 @@ body {
 }
 
 .full-screen {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   position: relative;
   overflow: hidden;
@@ -115,7 +116,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 100%;
     padding-bottom: 25px;
   }
 
@@ -154,7 +154,6 @@ body {
 
   &__content-block {
     display: flex;
-    flex-direction: column;
     gap: 16px;
   }
 }
@@ -219,20 +218,29 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
-    padding: 120px 80px;
 
     &__text-preview {
-      max-width: 20%;
+      flex: 0 1 40%;
       margin-bottom: 0;
     }
 
+    &__title {
+      font-size: 64px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
     &__content-block {
-      display: grid;
-      max-width: 50%;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex: 0 1 50%;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 24px;
+      padding-top: 340px;
     }
   }
   .preview-card {
