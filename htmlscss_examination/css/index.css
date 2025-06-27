@@ -229,6 +229,7 @@ body {
 }
 .full-screen__content-block {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 

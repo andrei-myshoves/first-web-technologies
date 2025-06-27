@@ -154,6 +154,7 @@ body {
 
   &__content-block {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
   }
 }
