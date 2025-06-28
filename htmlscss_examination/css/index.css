@@ -101,7 +101,7 @@ body {
 .header {
   display: flex;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   justify-content: space-between;
@@ -338,12 +338,10 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-.footer-content__item-link:hover {
-  text-decoration: underline;
-  color: #ffc41e;
-  cursor: pointer;
+.footer-content__item-link:last-child {
+  margin-bottom: 0;
 }
 .footer-content__item-app-link {
   display: block;
@@ -352,20 +350,20 @@ body {
   background-position: center;
   padding-bottom: 10px;
 }
-.footer-content__item-app-link:first-child {
-  background-image: url("../img/socials/app-store.jpg");
+.footer-content__item-app-link:nth-child(2) {
+  background-image: url("../img/socials/app-store.png");
   width: 160px;
   height: 53px;
 }
-.footer-content__item-app-link:last-child {
-  background-image: url("../img/socials/google-play.jpg");
+.footer-content__item-app-link:nth-child(3) {
+  background-image: url("../img/socials/google-play.png");
   width: 160px;
   height: 47px;
 }
 .footer-content__socials {
   display: flex;
   gap: 12px;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 .footer-content__item-social-link {
   width: 24px;
@@ -411,7 +409,6 @@ body {
   background-image: url("../img/icons/rectangular-speech-bubble.svg");
   background-color: #f6404f;
   border: none;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
