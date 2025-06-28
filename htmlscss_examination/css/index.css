@@ -313,3 +313,119 @@ body {
     padding: 16px;
   }
 }
+.footer {
+  background-color: #30bcc9;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.footer__content {
+  display: flex;
+  flex: 0 1 110px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-content__title {
+  font-size: 21px;
+  font-weight: 500;
+}
+.footer-content__list {
+  list-style: none;
+}
+.footer-content__item-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.footer-content__item-link:hover {
+  text-decoration: underline;
+  color: #ffc41e;
+  cursor: pointer;
+}
+.footer-content__item-app-link {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10px;
+}
+.footer-content__item-app-link:first-child {
+  background-image: url("../img/socials/app-store.jpg");
+  width: 160px;
+  height: 53px;
+}
+.footer-content__item-app-link:last-child {
+  background-image: url("../img/socials/google-play.jpg");
+  width: 160px;
+  height: 47px;
+}
+.footer-content__socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.footer-content__item-social-link {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer-content__item-social-link:nth-child(1) {
+  background-image: url("../img/socials/youtube.svg");
+}
+.footer-content__item-social-link:nth-child(2) {
+  background-image: url("../img/socials/vk.svg");
+}
+.footer-content__item-social-link:nth-child(3) {
+  background-image: url("../img/socials/facebook.svg");
+}
+.footer-content__item-social-link:nth-child(4) {
+  background-image: url("../img/socials/instagram.svg");
+}
+.footer-content__subtitle {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+.footer-content__subscribe {
+  display: flex;
+  padding-bottom: 50px;
+}
+.footer-content__subscribe-input {
+  flex: 0 1 215px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.footer-content__subscribe-button {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/icons/rectangular-speech-bubble.svg");
+  background-color: #f6404f;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
+  .footer__content {
+    width: calc(33.3333333333% - 32px);
+  }
+  .footer .footer-content__subscribe {
+    flex-direction: row;
+    align-items: center;
+  }
+}

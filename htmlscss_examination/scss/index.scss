@@ -244,9 +244,147 @@ body {
       padding-top: 340px;
     }
   }
+
   .preview-card {
     width: 255px;
     height: 148px;
     padding: 16px;
+  }
+}
+
+.footer {
+  background-color: #30bcc9;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__content {
+    display: flex;
+    flex: 0 1 110px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.footer-content {
+  &__title {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding-bottom: 10px;
+    &:hover {
+      text-decoration: underline;
+      color: #ffc41e;
+      cursor: pointer;
+    }
+  }
+
+  &__item-app-link {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 10px;
+
+    &:first-child {
+      background-image: url("../img/socials/app-store.jpg");
+      width: 160px;
+      height: 53px;
+    }
+
+    &:last-child {
+      background-image: url("../img/socials/google-play.jpg");
+      width: 160px;
+      height: 47px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__item-social-link {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:nth-child(1) {
+      background-image: url("../img/socials/youtube.svg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/socials/vk.svg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/socials/facebook.svg");
+    }
+
+    &:nth-child(4) {
+      background-image: url("../img/socials/instagram.svg");
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+
+  &__subscribe {
+    display: flex;
+    padding-bottom: 50px;
+  }
+
+  &__subscribe-input {
+    flex: 0 1 215px;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+  }
+
+  &__subscribe-button {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/icons/rectangular-speech-bubble.svg");
+    background-color: #f6404f;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 60px;
+
+    &__content {
+      width: calc(100% / 3 - 32px);
+    }
+
+    .footer-content__subscribe {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
