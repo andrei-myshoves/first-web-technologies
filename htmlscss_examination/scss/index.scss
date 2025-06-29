@@ -12,6 +12,7 @@ body {
   display: flex;
   width: 100%;
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   justify-content: space-between;
@@ -24,10 +25,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 0px;
-    width: calc(100% + 32px);
+    width: 100%;
     height: 1px;
     background-color: #ffffff;
-    transform: translateX(-16px);
   }
   &__logo {
     width: 175px;
@@ -368,21 +368,20 @@ body {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  &__item-link:hover {
-    text-decoration: underline;
-    color: #ffc41e;
+@media (hover: hover) {
+  .footer-content {
+    &__item-link:hover {
+      text-decoration: underline;
+      color: #ffc41e;
+    }
+    &__item-social-link:hover {
+      transform: scale(1.2);
+      transition: 0, 2s ease;
+    }
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  &__item-social-link:hover {
-    transform: scale(1.2);
-    transition: 0, 2s ease;
-  }
-}
-
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .footer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -391,7 +390,7 @@ body {
     column-gap: 24px;
 
     &__content {
-      flex: 1 1 calc(50% - 24px);
+      flex: 0 1 calc(50% - 24px);
     }
   }
 }
