@@ -23,7 +23,6 @@
   &__title {
     font-size: 30px;
     font-weight: 700;
-    color: #ffffff;
     padding-bottom: 40px;
   }
 
@@ -39,7 +38,6 @@
     padding-right: 20px;
     font-family: "Cinzel";
     font-size: 16px;
-    color: #ffffff;
 
     &::after {
       content: "";
@@ -80,7 +78,6 @@
 
   &:nth-child(3) {
     background-color: #ffc41e;
-    color: #000;
   }
 
   &:nth-child(4) {
@@ -90,7 +87,6 @@
   &__title {
     font-size: 16px;
     margin-bottom: 8px;
-    color: #ffffff;
   }
 
   &__link {
@@ -99,7 +95,6 @@
     font-size: 14px;
     text-decoration: underline;
     padding-right: 18px;
-    color: #ffffff;
     text-decoration: none;
 
     &::after {

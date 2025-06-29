@@ -1,22 +1,20 @@
 .side-menu {
   background-color: #2378fc;
   padding-top: 75px;
+	padding-bottom: 75px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 40px;
   &__content {
-    flex: 1 1 22%;
     min-width: 200px;
   }
 }
 
 .side-menu-content {
-  margin-bottom: 75px;
   &__title {
     font-size: 30px;
     font-weight: 500;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   &__list {
@@ -44,9 +42,6 @@
 
 @media (min-width: 500px) {
   .side-menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 25px;
     &__content {
       flex: 0 1 calc(50% - 24px);
