@@ -1,13 +1,7 @@
 @import "./common/_reset";
 @import "./common/_container";
+
 @import "./content/_header";
 @import "./content/_full-screen";
 @import "./content/_footer";
 
-body {
-  position: relative;
-  font-family: "Play", sans-serif;
-  background: #000;
-  color: #ffffff;
-  font-size: 21px;
-}
