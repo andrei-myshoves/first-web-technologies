@@ -69,6 +69,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+body {
+  position: relative;
+  font-family: "Play", sans-serif;
+  background: #000;
+  color: #ffffff;
+  font-size: 21px;
+}
+
 .container,
 .header-container {
   padding: 0px 16px;
@@ -90,14 +98,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 calc(50% - 780px);
   }
 }
-body {
-  position: relative;
-  font-family: "Play", sans-serif;
-  background: #000;
-  color: #ffffff;
-  font-size: 21px;
-}
-
 .header {
   display: flex;
   width: 100%;
