@@ -332,7 +332,7 @@ a {
   gap: 40px;
 }
 .side-menu__content {
-  min-width: 200px;
+  flex: 0 0 300px;
 }
 
 .side-menu-content__title {
