@@ -1,0 +1,127 @@
+.event {
+  padding-top: 75px;
+  padding-bottom: 79px;
+  background-color: #ffc41e;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__header-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__header-link {
+    font-size: 21px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: url("../img/icons/Arrow-black.svg") no-repeat center/contain;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__card {
+    padding: 16px;
+  }
+}
+
+.event-card {
+  &__img {
+		display: block;
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+
+    &:nth-child(1) {
+      background-image: url("../img/events-img/events-tree.png");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/events-img/events-fair.png");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/events-img/events-jewelry.png");
+    }
+
+    &:nth-child(4) {
+      background-image: url("../img/events-img/events-art.png");
+    }
+
+    &:nth-child(5) {
+      background-image: url("../img/events-img/events-vet-camp.png");
+    }
+
+    &:nth-child(6) {
+      background-image: url("../img/events-img/events-exhibition.png");
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #f6404f;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+@media (hover: hover) {
+  .event {
+    &__header-link:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .event {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__card {
+      width: calc(33.333% - 14px);
+    }
+
+    &__header-title {
+      font-size: 30px;
+    }
+  }
+}
