@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-		padding-bottom: 70px;
+    padding-bottom: 70px;
   }
 
   &__header-title {
@@ -21,6 +21,7 @@
     position: relative;
     font-size: 21px;
     font-weight: 500;
+		padding-right: 15px;
     color: #000;
     text-decoration: none;
 
@@ -30,7 +31,8 @@
       top: 50%;
       transform: translateY(-50%);
       width: 25px;
-      height: 14px;
+      height: 10px;
+			padding-right: 20px;
       background: url("../img/icons/Arrow-black.svg") no-repeat center/contain;
     }
   }
@@ -85,6 +87,9 @@
 
 @media (min-width: 768px) {
   .event {
+		&__header-link{
+			padding-right: 50px;
+		}
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -98,6 +103,7 @@
 
     &__header-title {
       font-size: 30px;
+			padding-left: 10px;
     }
   }
 }
