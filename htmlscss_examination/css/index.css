@@ -392,7 +392,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
-  padding-bottom: 70px;
+  margin-bottom: 70px;
 }
 .event__header-title {
   font-size: 30px;
@@ -421,9 +421,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-.event__card {
-  padding: 16px;
 }
 
 .event-card__img {
@@ -457,7 +454,7 @@ a {
 }
 @media (min-width: 768px) {
   .event__header-link {
-    padding-right: 50px;
+    margin-right: 17px;
   }
   .event__list {
     flex-direction: row;
@@ -466,11 +463,11 @@ a {
     gap: 20px;
   }
   .event__card {
-    width: calc(33.333% - 14px);
+    flex: 1 1 auto;
+    max-width: 32%;
   }
   .event__header-title {
     font-size: 30px;
-    padding-left: 10px;
   }
 }
 .footer {

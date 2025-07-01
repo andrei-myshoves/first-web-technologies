@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
   }
 
   &__header-title {
@@ -21,7 +21,7 @@
     position: relative;
     font-size: 21px;
     font-weight: 500;
-		padding-right: 15px;
+    padding-right: 15px;
     color: #000;
     text-decoration: none;
 
@@ -32,7 +32,7 @@
       transform: translateY(-50%);
       width: 25px;
       height: 10px;
-			padding-right: 20px;
+      padding-right: 20px;
       background: url("../img/icons/Arrow-black.svg") no-repeat center/contain;
     }
   }
@@ -42,12 +42,7 @@
     flex-direction: column;
     gap: 24px;
   }
-
-  &__card {
-    padding: 16px;
-  }
 }
-
 .event-card {
   &__img {
     display: block;
@@ -87,9 +82,9 @@
 
 @media (min-width: 768px) {
   .event {
-		&__header-link{
-			padding-right: 50px;
-		}
+    &__header-link {
+      margin-right: 17px;
+    }
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -98,12 +93,12 @@
     }
 
     &__card {
-      width: calc(33.333% - 14px);
+      flex: 1 1 auto;
+      max-width: 32%;
     }
 
     &__header-title {
       font-size: 30px;
-			padding-left: 10px;
     }
   }
 }
