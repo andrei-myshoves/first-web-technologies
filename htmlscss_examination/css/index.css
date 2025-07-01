@@ -381,6 +381,95 @@ a {
     flex: 1 1 45%;
   }
 }
+.event {
+  padding-top: 75px;
+  padding-bottom: 79px;
+  background-color: #ffc41e;
+}
+.event__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 70px;
+}
+.event__header-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+.event__header-link {
+  position: relative;
+  font-size: 21px;
+  font-weight: 500;
+  padding-right: 15px;
+  color: #000;
+  text-decoration: none;
+}
+.event__header-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 10px;
+  padding-right: 20px;
+  background: url("../img/icons/Arrow-black.svg") no-repeat center/contain;
+}
+.event__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.event-card__img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.event-card__date {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.event-card__title {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #f6404f;
+}
+.event-card__subtitle {
+  font-size: 16px;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .event__header-link:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 768px) {
+  .event__header-link {
+    margin-right: 17px;
+  }
+  .event__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .event__card {
+    flex: 1 1 auto;
+    max-width: 32%;
+  }
+  .event__header-title {
+    font-size: 30px;
+  }
+}
 .footer {
   background-color: #30bcc9;
   padding-top: 50px;
