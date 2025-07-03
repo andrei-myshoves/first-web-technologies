@@ -534,6 +534,7 @@ a {
 @media (hover: hover) {
   .news__header-link:hover {
     text-decoration: underline;
+    transition: 0, 2s ease;
   }
 }
 .news-card {
@@ -541,7 +542,6 @@ a {
   gap: 30px;
 }
 .news-card__img {
-  width: 100%;
   flex: 0 0 160px;
   height: 120px;
   -o-object-fit: cover;
@@ -570,11 +570,11 @@ a {
   .news {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 80px;
     gap: 125px;
   }
   .news__banners {
-    padding-top: 70px;
-    padding-bottom: 80px;
     gap: 59px;
   }
   .news__list {
@@ -595,7 +595,6 @@ a {
     width: 25px;
   }
   .news-card__img {
-    display: flex;
     width: 160px;
     flex: 0 1 120px;
   }
