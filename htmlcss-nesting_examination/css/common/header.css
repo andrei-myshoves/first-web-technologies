@@ -53,7 +53,7 @@
     & .header-nav__link {
       text-decoration: none;
       color: var(--color-black);
-      transition: opacity 0.3s;
+      transition: 0.3s;
     }
   }
 
@@ -92,7 +92,6 @@
 @media (hover: hover) {
   .header-nav__link {
     color: var(--color-green);
-    opacity: 0.7;
   }
 }
 
@@ -145,16 +144,16 @@
       & .header-text__logo {
         display: flex;
         row-gap: 234px;
+      }
 
-        & .header__nav {
-          .header-nav {
-            & .header-nav__list {
-              gap: 32px;
-            }
+      & .header__nav {
+        & .header-nav {
+          & .header-nav__list {
+            gap: 32px;
+          }
 
-            & .header-nav__link {
-              font-size: 16px;
-            }
+          & .header-nav__link {
+            font-size: 16px;
           }
         }
       }
