@@ -8,6 +8,12 @@
   }
 }
 
+@media (min-width: 1152px) {
+  .container {
+    padding: 0 calc(50% - 560px);
+  }
+}
+
 @media (min-width: 1440px) {
   .container {
     padding: 0 calc(50%-555px);
