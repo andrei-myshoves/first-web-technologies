@@ -178,6 +178,7 @@
       & .footer__content-socials {
         display: flex;
         flex-direction: column;
+        gap: 10px;
         margin-left: 18px;
         & .footer__socials {
           display: flex;
