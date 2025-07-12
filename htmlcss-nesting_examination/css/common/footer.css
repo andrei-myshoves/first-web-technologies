@@ -17,11 +17,6 @@
     display: block;
     margin-bottom: 20px;
 
-    & .footer__logo {
-      & .footer__logo-img {
-        height: auto;
-      }
-    }
     & .footer__contacts {
       display: none;
       flex-direction: column;
@@ -41,7 +36,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
     & .footer__logo-nav {
       display: none;
     }
@@ -60,13 +54,13 @@
       }
     }
 
-    & .footer__content {
+    & .footer__content-element {
       display: flex;
       flex-direction: column;
       padding-bottom: 18px;
       & .footer__title-font {
         font-size: 16px;
-				margin-bottom: 6px;
+        margin-bottom: 6px;
       }
       & .footer__title {
         font-size: 20px;
@@ -76,9 +70,9 @@
       }
 
       & .footer__list {
-				display: flex;
-				flex-direction: column;
-				gap: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
         & .footer__item {
           & .footer__item-link {
             font-size: 16px;
@@ -121,10 +115,10 @@
         height: 24px;
       }
     }
-		& .footer__subtitle-logo{
-			font-size: 12px;
-			color: var(--color-sub);
-		}
+    & .footer__subtitle-logo {
+      font-size: 12px;
+      color: var(--color-sub);
+    }
   }
 }
 
@@ -136,7 +130,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-			margin-bottom: 30px;
+      margin-bottom: 30px;
 
       & .footer__contacts {
         display: flex;
@@ -144,7 +138,7 @@
         gap: 8px;
 
         & .footer__phone {
-					font-size: 20px;
+          font-size: 20px;
           color: var(--color-black);
           text-decoration: none;
         }
@@ -156,20 +150,14 @@
 
     & .footer__nav {
       flex-direction: row;
-			justify-content: space-between;
-			& .footer__content-nav{
-				display: none;
-			}
-      & .footer__contacts-nav {
+      & .footer__content-nav {
         display: none;
-				gap: 0;
-        align-items: flex-end;
       }
-      & .footer__content {
-				padding-bottom: 16px;
-				& .footer__title-font{
-					font-size: 20px;
-				}
+      & .footer__content-element {
+        padding-bottom: 16px;
+        & .footer__title-font {
+          font-size: 20px;
+        }
         & .footer__title {
           font-size: 20px;
           & .footer__item {
@@ -180,7 +168,7 @@
     }
 
     & .footer__bottom-sheet {
-			padding-top: 16px;
+      padding-top: 16px;
       align-items: center;
     }
   }
@@ -189,7 +177,7 @@
 @media (min-width: 690px) {
   .footer {
     & .footer__nav {
-      & .footer__content {
+      & .footer__content-element {
         & .footer__title {
           font-size: 20px;
 
@@ -202,20 +190,21 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-left: 18px;
         & .footer__socials {
           display: flex;
         }
-				& .footer__link{
-					& .footer__subtitle-logo{
-						width: 132px;
-						font-size: 12px;
-						color: var(--color-sub);
-						& .footer__subtitle-span{
-							padding-left: 5px;
-						}
-					}
-				}
+        & .footer__link {
+          & .footer__subtitle-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--color-sub);
+            & .footer__text-rigth {
+              display: block;
+            }
+          }
+        }
       }
     }
     & .footer__bottom-sheet {
@@ -227,6 +216,8 @@
 
 @media (min-width: 1024px) {
   .footer {
+    padding-top: 23px;
+    padding-bottom: 23px;
     & .footer__preview {
       display: none;
     }
@@ -241,6 +232,7 @@
         & .footer__contacts-nav {
           display: flex;
           align-items: flex-start;
+          gap: 8px;
         }
       }
     }
@@ -253,18 +245,14 @@
 @media (hover: hover) {
   .footer {
     & .footer__contacts {
-      & .footer__phone {
-        &:hover {
-          text-decoration: underline;
-        }
+      & .footer__phone:hover {
+        text-decoration: underline;
       }
     }
 
-    & .footer__content {
-      .footer__item-link {
-        &:hover {
-          color: var(--color-green);
-        }
+    & .footer__content-element {
+      .footer__item-link:hover {
+        color: var(--color-green);
       }
     }
   }
