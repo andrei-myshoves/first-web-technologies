@@ -81,7 +81,7 @@ h6 {
 }
 
 /* Styles to common body */
-.body {
+body {
   position: relative;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
