@@ -225,9 +225,10 @@
       & .footer__content-nav {
         display: flex;
         flex-direction: column;
+        gap: 15px;
+
         & .footer__logo-nav {
           display: block;
-          margin-bottom: 35px;
         }
         & .footer__contacts-nav {
           display: flex;
