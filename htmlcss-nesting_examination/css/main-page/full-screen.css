@@ -1,0 +1,116 @@
+.full-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+	align-self: flex-start;
+  gap: 32px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .full-screen__picture {
+    display: none;
+    & .full-screen__img {
+      object-fit: cover;
+    }
+  }
+  & .full-screen__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & .full-screen__title {
+			display: flex;
+			flex-direction: column;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--color-black);
+    }
+    & .full-screen__label {
+      color: var(--color-green);
+    }
+    & .full-screen__subtitle {
+      font-size: 16px;
+      color: var(--color-sub);
+      margin-bottom: 20px;
+    }
+    & .full-screen__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 154px;
+      height: 50px;
+      border: 1px solid var(--color-green);
+      color: var(--color-green);
+      background-color: var(--color-white);
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+@media (hover: hover) {
+  .full-screen__button:hover {
+    background-color: var(--color-hover);
+  }
+}
+
+@media (min-width: 510px) {
+  .full-screen {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & .full-screen__picture {
+      display: flex;
+      flex: 0 1 195px;
+      height: 239px;
+    }
+    & .full-screen__content {
+      flex-shrink: 1;
+      & .full-screen__title {
+        font-size: 36px;
+      }
+      & .full-screen__subtitle {
+        font-size: 16px;
+      }
+      & .full-screen__button {
+        width: 178px;
+      }
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .full-screen {
+    padding-top: 0px;
+    & .full-screen__picture {
+      flex: 0 1 330px;
+      height: 380px;
+    }
+    & .full-screen__content {
+      & .full-screen__button {
+        width: 210px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .full-screen {
+    padding-top: 0px;
+    & .full-screen__picture {
+      flex: 0 1 540px;
+      height: 621px;
+    }
+    & .full-screen__content {
+      & .full-screen__title {
+        font-size: 60px;
+      }
+      & .full-screen__subtitle {
+        font-size: 18px;
+      }
+      & .full-screen__button {
+        width: 225px;
+        height: 65px;
+        font-size: 20px;
+      }
+    }
+  }
+}

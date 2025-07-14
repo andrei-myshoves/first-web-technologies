@@ -1,12 +1,3 @@
-:root {
-  --color-bg: #e1ede6;
-  --color-black: #2c2d35;
-  --color-hover: #c3d1c6;
-  --color-border: #c3d1c6;
-  --color-white: #ffffff;
-  --color-green: #598d66;
-}
-
 .header {
   display: flex;
   flex-direction: column;
