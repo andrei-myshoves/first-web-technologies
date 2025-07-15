@@ -2,6 +2,16 @@
   padding: 0 16px;
 }
 
+.header-container {
+  padding: 0;
+}
+
+@media (min-width: 510px){
+	.header-container{
+		padding: 0 16px;
+	}
+}
+
 @media (min-width: 834px) {
   .container {
     padding: 0 24px;
