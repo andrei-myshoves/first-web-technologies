@@ -65,7 +65,15 @@
   .header {
     & .header__mobile {
       background-color: transparent;
-      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: calc(100% - 32px);
+        background-color: var(--color-border);
+      }
     }
     & .header__content {
       display: flex;
@@ -74,11 +82,11 @@
     }
     & .header__nav {
       display: flex;
-      gap: 134px;
+      gap: 100px;
 
       & .header__nav-list {
         display: flex;
-        gap: 60px;
+        gap: 50px;
       }
       & .header__nav-link {
         font-size: 18px;
