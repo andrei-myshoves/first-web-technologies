@@ -1,0 +1,103 @@
+.half-screen {
+  position: relative;
+  height: 50svh;
+  background-image: url("../../img/painting/Full-screen.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  padding-bottom: 50px;
+  width: 320px;
+  height: 552px;
+  & .half-screen__title {
+    display: inline-block;
+    padding-left: 60px;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url("../../img/icons/Star.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+    }
+  }
+  & .half-screen__content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    & .half-screen__text {
+      font-size: 16px;
+      padding-bottom: 30px;
+    }
+  }
+  & .half-screen__button {
+    width: 290px;
+    height: 50px;
+    background-color: var(--color-button-half);
+    font-size: 18px;
+    color: var(--color-black);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+}
+
+@media (hover: hover) {
+  .half-screen__button {
+    &:hover {
+      background-color: var(--color-button-hlf-hover);
+    }
+  }
+}
+
+@media (min-width: 510px) {
+  .half-screen {
+    background-position: center;
+    height: 100svh;
+    width: 576px;
+  }
+}
+
+@media (min-width: 690px) {
+  .half-screen {
+    height: 100vh;
+    & .half-screen__title {
+      font-size: 30px;
+      &::after {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    & .half-screen__content {
+      & .half-screen__text {
+        font-size: 18px;
+      }
+    }
+    & .half-screen__button {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .half-screen__content {
+    max-width: 800px;
+    & .half-screen__title {
+      font-size: 40px;
+      & .half-screen__title::after {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
