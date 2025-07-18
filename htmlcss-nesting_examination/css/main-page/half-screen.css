@@ -1,17 +1,17 @@
 .half-screen {
   position: relative;
-  height: 50svh;
   background-image: url("../../img/painting/Full-screen\ \(2\).webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
+  padding-top: 50px;
   padding-bottom: 50px;
-  width: 320px;
-  height: 552px;
+  width: 100%;
   & .half-screen__title {
     padding-left: 60px;
     font-size: 24px;
@@ -42,6 +42,7 @@
   & .half-screen__button {
     width: 290px;
     height: 50px;
+    z-index: 2;
     background-color: var(--color-button-half);
     font-size: 18px;
     color: var(--color-black);
@@ -61,16 +62,12 @@
 
 @media (min-width: 510px) {
   .half-screen {
-    padding-top: 50px;
-    width: 576px;
-    height: 440px;
     align-items: flex-start;
     & .half-screen__title {
       max-width: 510px;
     }
     & .half-screen__content {
-      &,
-      .half-screen__text {
+      & .half-screen__text {
         line-height: 150%;
       }
     }
@@ -85,7 +82,12 @@
 @media (min-width: 690px) {
   .half-screen {
     height: 100vh;
-    width: 766px;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
     & .half-screen__title {
       font-size: 30px;
       &::after {
@@ -105,13 +107,16 @@
 }
 
 @media (min-width: 1024px) {
-  .half-screen__content {
-    max-width: 800px;
-    & .half-screen__title {
-      font-size: 40px;
-      & .half-screen__title::after {
-        width: 80px;
-        height: 80px;
+  .half-screen {
+    background-position: top;
+    & .half-screen__content {
+      max-width: 500px;
+      & .half-screen__title {
+        font-size: 40px;
+        & .half-screen__title::after {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
   }
