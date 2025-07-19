@@ -124,16 +124,12 @@
 
 @media (hover: hover) {
   .footer {
-    & .footer__phone {
-      &:hover {
-        text-decoration: underline;
-      }
+    & .footer__phone:hover {
+      text-decoration: underline;
     }
 
-    & .footer__item {
-      &:hover {
-        color: var(--color-green);
-      }
+    & .footer__item :hover {
+      color: var(--color-green);
     }
   }
 }
