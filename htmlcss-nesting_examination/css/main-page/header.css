@@ -55,7 +55,7 @@
 
 @media (hover: hover) {
   .header__nav-link {
-    &::hover {
+    &:hover {
       color: var(--color-green);
     }
   }

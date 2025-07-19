@@ -122,6 +122,22 @@
   }
 }
 
+@media (hover: hover) {
+  .footer {
+    & .footer__phone {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & .footer__item {
+      &:hover {
+        color: var(--color-green);
+      }
+    }
+  }
+}
+
 @media (min-width: 510px) {
   .footer {
     & .footer__preview {
@@ -239,22 +255,6 @@
     }
     & .footer__content-socials {
       margin-left: 193px;
-    }
-  }
-}
-
-@media (hover: hover) {
-  .footer {
-    & .footer__contacts {
-      & .footer__phone:hover {
-        text-decoration: underline;
-      }
-    }
-
-    & .footer__content-element {
-      .footer__item-link:hover {
-        color: var(--color-green);
-      }
     }
   }
 }
