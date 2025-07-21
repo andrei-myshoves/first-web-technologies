@@ -3,7 +3,6 @@
   padding-bottom: 60px;
   & .gallery__head {
     display: flex;
-    /* flex-direction: column; */
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
