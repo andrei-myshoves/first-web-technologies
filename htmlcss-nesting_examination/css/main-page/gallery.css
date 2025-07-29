@@ -1,0 +1,190 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .gallery__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+    & .gallery__title {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    & .gallery__filters {
+      display: flex;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 20px;
+      gap: 20px;
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      & .gallery__filter-btn {
+        scroll-snap-align: start;
+        white-space: nowrap;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: var(--color-swiper-button-background);
+        border-radius: 20px;
+        transition: background-color 0.2s ease;
+      }
+    }
+  }
+  & .gallery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & .gallery-card {
+      padding: 20px;
+      background-color: var(--color-bg);
+      display: flex;
+      flex-direction: column;
+      & .gallery-card__image {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+      }
+      & .gallery-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & .gallery-card__author {
+          font-size: 16px;
+          color: var(--color-sub);
+        }
+        & .gallery-card__title {
+          font-size: 24px;
+          font-weight: 500;
+          color: var(--color-black);
+        }
+        & .gallery-card__info {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 16px;
+          margin-bottom: 24px;
+          color: var(--color-black);
+        }
+        & .gallery-card__price {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 10px;
+          color: var(--color-price);
+        }
+        & .gallery-card__button {
+          height: 50px;
+          font-size: 18px;
+          margin-bottom: 10px;
+          color: var(--color-green);
+          background-color: transparent;
+          border: 1px solid var(--color-green);
+          transition: background-color 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .gallery__filter-btn:hover {
+    background-color: #eee;
+  }
+  .gallery-card__button:hover {
+    background-color: #333;
+  }
+}
+
+@media (min-width: 510px) {
+  .gallery {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    & .gallery__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      & .gallery-card {
+        flex: 0 1 240px;
+        gap: 0px;
+        & .gallery-card__image {
+          width: 200px;
+        }
+        & .gallery-card__title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .gallery {
+    & .gallery__head {
+      flex-direction: row;
+      gap: 20px;
+      & .gallery__title {
+        font-size: 30px;
+      }
+      & .gallery__filters {
+        & .gallery__filter-btn {
+          font-size: 20px;
+        }
+      }
+    }
+    & .gallery__list {
+      & .gallery-card {
+        flex: 0 1 330px;
+        & .gallery-card__image {
+          width: 290px;
+          height: 422px;
+        }
+        & .gallery-card__author {
+          font-size: 18px;
+        }
+        & .gallery-card__title {
+          font-size: 30px;
+        }
+        & .gallery-card__info {
+          font-size: 18px;
+        }
+        & .gallery-card__price {
+          margin-bottom: 20px;
+        }
+      }
+      & .gallery-card__button {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    & .gallery__title {
+      font-size: 40px;
+    }
+    & .gallery__list {
+      gap: 30px;
+      & .gallery-card {
+        flex: 1 1 350px;
+        & .gallery-card__image {
+          width: 310px;
+        }
+      }
+    }
+    & .gallery-card__button {
+      padding: 12px 18px;
+    }
+  }
+}
