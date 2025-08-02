@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Драка с троллем</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", function () {
+          const myMove = prompt("Куда ударишь? (введи: лево, право или нос)").toLowerCase();
+
+          if (!["лево", "право", "нос"].includes(myMove)) {
+            alert("Некорректный ввод. Введи: лево, право или нос.");
+            return;
+          }
+
+          const trollRandom = Math.random();
+          let trollMove;
+
+          if (trollRandom < 0.4) {
+            trollMove = "лево";
+          } else if (trollRandom > 0.6) {
+            trollMove = "право";
+          } else {
+            trollMove = "нос";
+          }
+
+          if (myMove === "лево" && trollMove === "лево") {
+            alert("Ничья. Оба ударили слева.");
+          } else if (myMove === "лево" && trollMove === "право") {
+            alert("Пиздец вам обоим. Оба погибли.");
+          } else if (myMove === "нос" && trollMove === "нос") {
+            alert("Ничья. Удары в нос взаимно нейтрализованы.");
+          } else if (myMove === "нос" && (trollMove === "лево" || trollMove === "право")) {
+            alert("Ты победил! Удар в нос сильнее.");
+          } else if ((myMove === "лево" || myMove === "право") && trollMove === "нос") {
+            alert("Ты проиграл. Тролль попал в нос.");
+          } else {
+            alert(`Ты ударил ${myMove}, тролль ударил ${trollMove}.`);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="button">Start game</button>
+  </body>
+</html>
