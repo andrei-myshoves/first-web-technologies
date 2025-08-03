@@ -7,34 +7,42 @@
       document.addEventListener("DOMContentLoaded", function () {
         const button = document.getElementById("button");
 
+        const NOSE = "нос";
+
+        const LEFT = "лево";
+
+        const RIGHT = "право";
+
+        const MOVES = [NOSE, LEFT, RIGHT];
+
         button.addEventListener("click", function () {
           const myMove = prompt("Куда ударишь? (введи: лево, право или нос)").toLowerCase();
 
-          if (!["лево", "право", "нос"].includes(myMove)) {
+          if (!MOVES.includes(myMove)) {
             alert("Некорректный ввод. Введи: лево, право или нос.");
             return;
           }
 
-          const trollRandom = Math.random();
+          const trollRandom = Math.floor(Math.random() * 10);
           let trollMove;
 
-          if (trollRandom < 0.4) {
-            trollMove = "лево";
-          } else if (trollRandom > 0.6) {
-            trollMove = "право";
+          if (trollRandom < 4) {
+            trollMove = LEFT;
+          } else if (trollRandom > 6) {
+            trollMove = RIGHT;
           } else {
-            trollMove = "нос";
+            trollMove = NOSE;
           }
 
-          if (myMove === "лево" && trollMove === "лево") {
+          if (myMove === LEFT && trollMove === LEFT) {
             alert("Ничья. Оба ударили слева.");
-          } else if (myMove === "лево" && trollMove === "право") {
+          } else if (myMove === LEFT && trollMove === RIGHT) {
             alert("Пиздец вам обоим. Оба погибли.");
-          } else if (myMove === "нос" && trollMove === "нос") {
+          } else if (myMove === NOSE && trollMove === NOSE) {
             alert("Ничья. Удары в нос взаимно нейтрализованы.");
-          } else if (myMove === "нос" && (trollMove === "лево" || trollMove === "право")) {
+          } else if (myMove === NOSE && (trollMove === LEFT || trollMove === RIGHT)) {
             alert("Ты победил! Удар в нос сильнее.");
-          } else if ((myMove === "лево" || myMove === "право") && trollMove === "нос") {
+          } else if ((myMove === LEFT || myMove === RIGHT) && trollMove === NOSE) {
             alert("Ты проиграл. Тролль попал в нос.");
           } else {
             alert(`Ты ударил ${myMove}, тролль ударил ${trollMove}.`);
