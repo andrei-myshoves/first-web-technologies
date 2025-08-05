@@ -5,6 +5,13 @@
   border-radius: 16px;
   width: 320px;
   text-align: center;
+  & .calculator-display {
+    font-size: 25px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--color-border-display);
+    padding: 10px;
+    text-align: right;
+  }
   & .calculator-input {
     width: 100%;
     padding: 12px;

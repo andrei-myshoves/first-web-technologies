@@ -12,13 +12,14 @@
   </head>
   <body>
     <div class="calculator container">
-      <input class="calculator-input" id="input" type="text" oninput="updateInput()" placeholder="Введите число" />
+      <div id="display" class="calculator-display">0</div>
+      <input class="calculator-input" id="input" type="number" placeholder="Введите число" />
       <div class="calculator-buttons">
-        <button class="calculator-button" onclick="chooseOperation(OPERATIONS.SUM)">+</button>
-        <button class="calculator-button" onclick="chooseOperation(OPERATIONS.SUB)">−</button>
-        <button class="calculator-button" onclick="chooseOperation(OPERATIONS.MUL)">×</button>
-        <button class="calculator-button" onclick="chooseOperation(OPERATIONS.DIV)">÷</button>
-        <button class="calculator-equal" onclick="calculate()">=</button>
+        <button class="calculator-button" data-operation="SUM">+</button>
+        <button class="calculator-button" data-operation="SUB">−</button>
+        <button class="calculator-button" data-operation="MUL">×</button>
+        <button class="calculator-button" data-operation="DIV">÷</button>
+        <button class="calculator-equal" id="equals">=</button>
       </div>
     </div>
     <script src="./js/index.js"></script>

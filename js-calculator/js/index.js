@@ -1,79 +1,138 @@
 const OPERATIONS = {
-  SUM: "sum",
-  SUB: "sub",
-  MUL: "mul",
-  DIV: "div",
+  SUM: "SUM",
+  SUB: "SUB",
+  MUL: "MUL",
+  DIV: "DIV",
 };
 
 const store = {
-  result: 0,
+  result: null,
+  input: 0,
   operation: null,
-  input: "",
+  displayText: "0",
 };
 
-function updateInput() {
-  const inputElement = document.getElementById("input");
-  let value = inputElement.value;
+const inputElement = document.getElementById("input");
+const displayElement = document.getElementById("display");
+const operationButtons = document.querySelectorAll(".calculator-button");
+const equalsButton = document.getElementById("equals");
 
-  if (value.length > 10) value = value.slice(0, 10);
+inputElement.value = "0";
+displayElement.textContent = "0";
 
-  if (!isNaN(value) || /^-?\d+\.?\d*$/.test(value)) {
-    store.input = value;
+inputElement.addEventListener("input", () => {
+  let raw = inputElement.value;
+
+  if (raw.length > 10) {
+    raw = raw.slice(0, 10);
+    inputElement.value = raw;
+  }
+
+  if (raw === "" || raw === "-") {
+    store.input = 0;
+    updateDisplay();
+    return;
+  }
+
+  const number = Number(raw);
+  if (!isNaN(number)) {
+    store.input = number;
+    updateDisplay();
+  }
+});
+
+operationButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const operation = btn.dataset.operation;
+    handleOperation(operation);
+  });
+});
+
+equalsButton.addEventListener("click", () => {
+  calculateResult();
+});
+
+function handleOperation(operationName) {
+  if (store.input !== null) {
+    if (store.result === null) {
+      store.result = store.input;
+    } else if (store.operation !== null) {
+      store.result = compute(store.result, store.input, store.operation);
+    }
+    store.operation = operationName;
+    store.input = 0;
+    inputElement.value = "0";
+    updateDisplay();
+  } else if (store.result !== null) {
+    store.operation = operationName;
+    updateDisplay();
   }
 }
 
-function chooseOperation(op) {
-  updateInput();
+function calculateResult() {
+  if (store.operation && !isNaN(store.input)) {
+    const a = store.result;
+    const b = store.input;
+    let result;
 
-  if (store.input !== "") {
-    store.result = parseFloat(store.input);
-    store.input = "";
-    document.getElementById("input").value = "";
+    switch (store.operation) {
+      case OPERATIONS.SUM:
+        result = a + b;
+        break;
+      case OPERATIONS.SUB:
+        result = a - b;
+        break;
+      case OPERATIONS.MUL:
+        result = a * b;
+        break;
+      case OPERATIONS.DIV:
+        result = b !== 0 ? a / b : "Ошибка";
+        break;
+    }
+
+    if (result === "Ошибка") {
+      store.displayText = "Ошибка деления на 0";
+      store.result = null;
+    } else {
+      result = +result.toFixed(10);
+      store.result = result;
+      store.displayText = result.toString();
+    }
+
+    store.input = 0;
+    store.operation = null;
+    inputElement.value = "";
+    displayElement.textContent = store.displayText;
   }
-
-  store.operation = op;
-  updateResultDisplay(`${store.result} ${getOperationSymbol(op)}`);
 }
 
-function calculate() {
-  updateInput();
+function updateDisplay() {
+  if (store.result !== null && store.operation !== null && store.input !== null) {
+    displayElement.textContent = `${store.result} ${getOperationSymbol(store.operation)} ${store.input}`;
+  } else if (store.result !== null && store.operation !== null) {
+    displayElement.textContent = `${store.result} ${getOperationSymbol(store.operation)}`;
+  } else {
+    displayElement.textContent = store.input.toString();
+  }
+}
 
-  const a = parseFloat(store.result);
-  const b = parseFloat(store.input);
-  let result;
-
-  switch (store.operation) {
+function compute(a, b, operation) {
+  switch (operation) {
     case OPERATIONS.SUM:
-      result = a + b;
-      break;
+      return a + b;
     case OPERATIONS.SUB:
-      result = a - b;
-      break;
+      return a - b;
     case OPERATIONS.MUL:
-      result = a * b;
-      break;
+      return a * b;
     case OPERATIONS.DIV:
-      result = b !== 0 ? a / b : "Ошибка";
-      break;
+      return b !== 0 ? a / b : "Ошибка";
     default:
-      result = b;
+      return b;
   }
-
-  store.result = result;
-  store.input = "";
-  store.operation = null;
-
-  updateResultDisplay(result);
-  document.getElementById("input").value = "";
 }
 
-function updateResultDisplay(text) {
-  const inputEl = document.getElementById("input");
-  inputEl.value = text;
-}
-
-function getOperationSymbol(op) {
-  switch (op) {
+function getOperationSymbol(operation) {
+  switch (operation) {
     case OPERATIONS.SUM:
       return "+";
     case OPERATIONS.SUB:
