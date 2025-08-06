@@ -16,6 +16,7 @@ const inputElement = document.getElementById("input");
 const displayElement = document.getElementById("display");
 const operationButtons = document.querySelectorAll(".calculator-button");
 const equalsButton = document.getElementById("equals");
+const clearButton = document.getElementById("clear");
 
 inputElement.value = "0";
 displayElement.textContent = "0";
@@ -50,6 +51,16 @@ operationButtons.forEach((btn) => {
 
 equalsButton.addEventListener("click", () => {
   calculateResult();
+});
+
+clearButton.addEventListener("click", () => {
+  store.result = null;
+  store.input = 0;
+  store.operation = null;
+  store.displayText = "0";
+
+  inputElement.value = "";
+  displayElement.textContent = "0";
 });
 
 function handleOperation(operationName) {
