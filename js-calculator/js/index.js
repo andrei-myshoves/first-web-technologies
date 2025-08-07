@@ -6,11 +6,12 @@ const OPERATIONS = {
 };
 
 const store = {
-  result: null,
   input: 0,
   operation: null,
   displayText: "0",
 };
+
+let previousValue = null;
 
 const inputElement = document.getElementById("input");
 const displayElement = document.getElementById("display");
@@ -21,16 +22,18 @@ const clearButton = document.getElementById("clear");
 inputElement.value = "0";
 displayElement.textContent = "0";
 
-inputElement.addEventListener("input", () => {
+inputElement.addEventListener("input", handleInput);
+
+function handleInput() {
   let raw = inputElement.value;
 
   if (raw.length > 10) {
-    raw = raw.slice(0, 10);
-    inputElement.value = raw;
+    return;
   }
 
   if (raw === "" || raw === "-") {
     store.input = 0;
+    store.displayText = "0";
     updateDisplay();
     return;
   }
@@ -38,23 +41,22 @@ inputElement.addEventListener("input", () => {
   const number = Number(raw);
   if (!isNaN(number)) {
     store.input = number;
+    store.displayText = raw;
     updateDisplay();
   }
-});
+}
 
-operationButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const operation = btn.dataset.operation;
+operationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const operation = button.dataset.operation;
     handleOperation(operation);
   });
 });
 
-equalsButton.addEventListener("click", () => {
-  calculateResult();
-});
+equalsButton.addEventListener("click", calculateResult);
 
 clearButton.addEventListener("click", () => {
-  store.result = null;
+  previousValue = null;
   store.input = 0;
   store.operation = null;
   store.displayText = "0";
@@ -65,65 +67,41 @@ clearButton.addEventListener("click", () => {
 
 function handleOperation(operationName) {
   if (store.input !== null) {
-    if (store.result === null) {
-      store.result = store.input;
+    if (previousValue === null) {
+      previousValue = store.input;
     } else if (store.operation !== null) {
-      store.result = compute(store.result, store.input, store.operation);
+      previousValue = compute(previousValue, store.input, store.operation);
     }
     store.operation = operationName;
     store.input = 0;
     inputElement.value = "0";
     updateDisplay();
-  } else if (store.result !== null) {
+  } else if (store.displayText !== null) {
     store.operation = operationName;
     updateDisplay();
   }
 }
 
 function calculateResult() {
-  if (store.operation && !isNaN(store.input)) {
-    const a = store.result;
-    const b = store.input;
-    let result;
-
-    switch (store.operation) {
-      case OPERATIONS.SUM:
-        result = a + b;
-        break;
-      case OPERATIONS.SUB:
-        result = a - b;
-        break;
-      case OPERATIONS.MUL:
-        result = a * b;
-        break;
-      case OPERATIONS.DIV:
-        result = b !== 0 ? a / b : "Ошибка";
-        break;
-    }
-
-    if (result === "Ошибка") {
+  if (store.operation !== null) {
+    if (store.operation === OPERATIONS.DIV && store.input === 0) {
       store.displayText = "Ошибка деления на 0";
-      store.result = null;
+      previousValue = null;
     } else {
-      result = +result.toFixed(10);
-      store.result = result;
-      store.displayText = result.toString();
+      previousValue = compute(previousValue, store.input, store.operation);
+      store.displayText = previousValue.toString();
     }
-
-    store.input = 0;
     store.operation = null;
-    inputElement.value = "";
-    displayElement.textContent = store.displayText;
+    store.input = 0;
+    inputElement.value = "0";
+    updateDisplay();
   }
 }
-
 function updateDisplay() {
-  if (store.result !== null && store.operation !== null && store.input !== null) {
-    displayElement.textContent = `${store.result} ${getOperationSymbol(store.operation)} ${store.input}`;
-  } else if (store.result !== null && store.operation !== null) {
-    displayElement.textContent = `${store.result} ${getOperationSymbol(store.operation)}`;
+  if (store.operation !== null) {
+    displayElement.textContent = `${store.displayText} ${getOperationSymbol(store.operation)} ${store.input}`;
   } else {
-    displayElement.textContent = store.input.toString();
+    displayElement.textContent = store.displayText;
   }
 }
 

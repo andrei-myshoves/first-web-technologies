@@ -82,10 +82,10 @@ h6 {
 
 /* Styles to common body */
 body {
-  font-family: 'Times New Roman', sans-serif;
-  background: #f0f2f5;
+  font-family: "Times New Roman", sans-serif;
+  background: var(--color-bg-body);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  min-height: 100svh;
 }

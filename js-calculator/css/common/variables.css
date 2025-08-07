@@ -1,9 +1,10 @@
 :root {
+  --color-bg-body: #f0f2f5;
   --color-bg: #e1ede6;
   --color-border: #161616;
   --color-button-equal: #34c759;
   --color-button-equal-hover: #065c1c;
   --color-button-hover: #357bd8;
   --color-border-input: #ccc;
-	--color-border-display:#ccc;
+  --color-border-display: #ccc;
 }

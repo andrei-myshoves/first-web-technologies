@@ -12,7 +12,7 @@
     padding: 10px;
     text-align: right;
   }
-  & .calculator-input {
+  & .calculator__input {
     width: 100%;
     padding: 12px;
     font-size: 25px;
@@ -20,7 +20,7 @@
     border-radius: 8px;
     margin-bottom: 20px;
   }
-  & .calculator-buttons {
+  & .calculator__buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
