@@ -5,6 +5,25 @@ const OPERATIONS = {
   DIV: "DIV",
 };
 
+const operationSymbols = {
+  SUM: "+",
+  SUB: "−",
+  MUL: "×",
+  DIV: "÷",
+};
+
+const buttonsContainer = document.querySelector(".calculator__buttons");
+const equalsButton = document.getElementById("equals");
+
+Object.keys(OPERATIONS).forEach((operationKey) => {
+  const button = document.createElement("button");
+  button.classList.add("calculator-button");
+  button.dataset.operation = OPERATIONS[operationKey];
+  button.textContent = operationSymbols[operationKey];
+
+  buttonsContainer.insertBefore(button, equalsButton);
+});
+
 const store = {
   input: 0,
   operation: null,
@@ -16,7 +35,6 @@ let previousValue = null;
 const inputElement = document.getElementById("input");
 const displayElement = document.getElementById("display");
 const operationButtons = document.querySelectorAll(".calculator-button");
-const equalsButton = document.getElementById("equals");
 const clearButton = document.getElementById("clear");
 
 inputElement.value = "0";
