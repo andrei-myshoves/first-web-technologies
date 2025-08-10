@@ -37,7 +37,7 @@ const displayElement = document.getElementById("display");
 const operationButtons = document.querySelectorAll(".calculator-button");
 const clearButton = document.getElementById("clear");
 
-inputElement.value = "0";
+inputElement.value = "";
 displayElement.textContent = "0";
 
 inputElement.addEventListener("input", handleInput);
@@ -54,6 +54,11 @@ function handleInput() {
     store.displayText = "0";
     updateDisplay();
     return;
+  }
+
+  if (raw.length > 1 && raw.startsWith("0") && !raw.startsWith("0.")) {
+    raw = raw.replace(/^0+/, "");
+    inputElement.value = raw;
   }
 
   const number = Number(raw);
@@ -92,7 +97,7 @@ function handleOperation(operationName) {
     }
     store.operation = operationName;
     store.input = 0;
-    inputElement.value = "0";
+    inputElement.value = "";
     updateDisplay();
   } else if (store.displayText !== null) {
     store.operation = operationName;
@@ -111,7 +116,7 @@ function calculateResult() {
     }
     store.operation = null;
     store.input = 0;
-    inputElement.value = "0";
+    inputElement.value = "";
     updateDisplay();
   }
 }
