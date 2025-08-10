@@ -86,6 +86,7 @@ clearButton.addEventListener("click", () => {
 
   inputElement.value = "";
   displayElement.textContent = "0";
+  inputElement.focus();
 });
 
 function handleOperation(operationName) {
@@ -103,6 +104,7 @@ function handleOperation(operationName) {
     store.operation = operationName;
     updateDisplay();
   }
+  inputElement.focus();
 }
 
 function calculateResult() {
@@ -119,6 +121,7 @@ function calculateResult() {
     inputElement.value = "";
     updateDisplay();
   }
+  inputElement.focus();
 }
 function updateDisplay() {
   if (store.operation !== null) {
