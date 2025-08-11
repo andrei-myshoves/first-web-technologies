@@ -28,13 +28,16 @@
       padding: 15px;
       font-size: 10px;
       border: 1px solid var(--color-border);
+      border-radius: 5px;
       transition: background 0.2s ease;
     }
     & .calculator-clear {
       border: 2px solid var(--color-border);
+      border-radius: 5px;
     }
     & .calculator-equal {
       border: 1px solid var(--color-border);
+      border-radius: 5px;
     }
   }
   & .calculator__history {

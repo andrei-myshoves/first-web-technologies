@@ -45,26 +45,20 @@ inputElement.addEventListener("input", handleInput);
 function handleInput() {
   let raw = inputElement.value;
 
-  if (raw.length > 10) {
-    return;
-  }
-
-  if (raw === "" || raw === "-") {
-    store.input = 0;
-    store.displayText = "0";
-    updateDisplay();
-    return;
-  }
-
   if (raw.length > 1 && raw.startsWith("0") && !raw.startsWith("0.")) {
     raw = raw.replace(/^0+/, "");
     inputElement.value = raw;
   }
 
+  if (raw === "" || raw === "-") {
+    store.input = null;
+    updateDisplay();
+    return;
+  }
+
   const number = Number(raw);
   if (!isNaN(number)) {
     store.input = number;
-    store.displayText = raw;
     updateDisplay();
   }
 }
@@ -97,7 +91,7 @@ function handleOperation(operationName) {
       previousValue = compute(previousValue, store.input, store.operation);
     }
     store.operation = operationName;
-    store.input = 0;
+    store.input = null;
     inputElement.value = "";
     updateDisplay();
   } else if (store.displayText !== null) {
@@ -108,7 +102,7 @@ function handleOperation(operationName) {
 }
 
 function calculateResult() {
-  if (store.operation !== null) {
+  if (store.operation !== null && store.input !== null) {
     if (store.operation === OPERATIONS.DIV && store.input === 0) {
       store.displayText = "Ошибка деления на 0";
       previousValue = null;
@@ -117,15 +111,19 @@ function calculateResult() {
       store.displayText = previousValue.toString();
     }
     store.operation = null;
-    store.input = 0;
+    store.input = null;
     inputElement.value = "";
     updateDisplay();
   }
   inputElement.focus();
 }
 function updateDisplay() {
-  if (store.operation !== null) {
-    displayElement.textContent = `${store.displayText} ${getOperationSymbol(store.operation)} ${store.input}`;
+  if (store.operation !== null && store.input !== null) {
+    displayElement.textContent = `${previousValue} ${getOperationSymbol(store.operation)} ${store.input}`;
+  } else if (store.operation !== null) {
+    displayElement.textContent = `${previousValue} ${getOperationSymbol(store.operation)}`;
+  } else if (store.input !== null) {
+    displayElement.textContent = store.input;
   } else {
     displayElement.textContent = store.displayText;
   }
