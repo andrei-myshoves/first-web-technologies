@@ -26,6 +26,18 @@
     }
   }
   & .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: var(--color-bg);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    & .header__nav.active {
+      right: 0;
+    }
     & .header__nav-list {
       display: none;
       & .header__nav-link {
@@ -40,6 +52,12 @@
     justify-content: space-between;
     & .header__action {
       display: inline-block;
+      & .burger-menu__img {
+        transition: transform 0.3s ease;
+      }
+      & .burger-menu.open .burger-menu__img {
+        content: url("../../img/icons/Cross.svg");
+      }
       & .header__action-img {
         width: 24px;
         height: 24px;
