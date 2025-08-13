@@ -35,11 +35,11 @@
     transition: right 0.3s ease;
     padding: 20px;
     z-index: 1000;
-    & .header__nav.active {
+    & .active {
       right: 0;
     }
     & .header__nav-list {
-      display: none;
+      display: block;
       & .header__nav-link {
         text-decoration: none;
         color: var(--color-black);
@@ -55,8 +55,10 @@
       & .burger-menu__img {
         transition: transform 0.3s ease;
       }
-      & .burger-menu.open .burger-menu__img {
-        content: url("../../img/icons/Cross.svg");
+      & .burger-menu {
+        & .open .burger-menu__img {
+          content: url("../../img/icons/Cross.svg");
+        }
       }
       & .header__action-img {
         width: 24px;
