@@ -1,11 +1,12 @@
-bdocument.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger-menu');
-  const nav = document.querySelector('.header__nav');
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger-menu");
+  const nav = document.getElementById("header__nav");
 
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active'); 
-    burger.classList.toggle('open');
+  function handleToggleBurgerMenu() {
+    nav.classList.toggle("active");
+    burger.classList.toggle("open");
+    burger.setAttribute("aria-expanded", burger.classList.contains("open"));
+  }
 
-    burger.setAttribute('aria-expanded', burger.classList.contains('open'));
-  });
+  burger.addEventListener("click", handleToggleBurgerMenu);
 });
