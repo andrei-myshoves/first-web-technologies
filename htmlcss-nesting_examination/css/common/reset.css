@@ -87,3 +87,7 @@ body {
   font-size: 16px;
   color: #2c2d35;
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100svh;
+}
