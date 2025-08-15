@@ -5,7 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleToggleBurgerMenu() {
     nav.classList.toggle("active");
     burger.classList.toggle("open");
-    burger.setAttribute("aria-expanded", burger.classList.contains("open"));
+
+    const expanded = burger.classList.contains("open");
+    burger.setAttribute("aria-expanded", expanded);
+
+    if (expanded) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
   }
 
   burger.addEventListener("click", handleToggleBurgerMenu);

@@ -28,11 +28,11 @@
   & .header__nav {
     position: fixed;
     left: -100%;
-    width: 250px;
-    height: 100svh;
+    width: 100%;
+    height: 100vh;
     background: var(--color-bg);
     transition: transform 0.3s ease-in-out;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-left: 15px;
     z-index: 1000;
     & .header__nav-list {
