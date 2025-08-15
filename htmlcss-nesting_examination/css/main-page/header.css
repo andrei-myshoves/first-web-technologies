@@ -40,8 +40,9 @@
       flex-direction: column;
       gap: 50px;
       overflow-y: scroll;
-      height: 500px;
+      height: 100%;
       & .header__nav-link {
+        display: block;
         text-decoration: none;
         padding: 12px 0;
         color: var(--color-black);
@@ -60,20 +61,49 @@
     z-index: 1100;
     & .header__action {
       display: inline-block;
-      & .burger-menu {
-        & .burger-menu__img {
-          transition: transform 0.3s ease;
-        }
+    }
+  }
+  & .burger-menu {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: none;
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--color-burger-menu);
+      transition: transform 0.3s ease;
+    }
+    span:nth-child(1) {
+      top: 0;
+    }
+    span:nth-child(2) {
+      top: 8px;
+    }
+    span:nth-child(3) {
+      top: 16px;
+    }
+    &.open {
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
       }
-      & .header__action-img {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 8px;
       }
     }
   }
-  & .burger-menu.open .burger-menu__img {
-    content: url("../../img/icons/Cross.svg");
+  & .header__action-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
   }
 }
 
