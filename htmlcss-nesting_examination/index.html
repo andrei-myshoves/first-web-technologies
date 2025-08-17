@@ -34,13 +34,13 @@
         <a href="/" class="header__content-logo">
           <img class="header__content-logo-img" src="./img/logo/Logo-main.svg" alt="Ink. House logo" />
         </a>
-        <nav class="header__nav">
+        <nav id="header__nav" class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="/" class="header__nav-link">Репродукции</a>
+              <a href="#rep" class="header__nav-link">Репродукции</a>
             </li>
             <li class="header__nav-item">
-              <a href="/" class="header__nav-link">Новинки</a>
+              <a href="#new" class="header__nav-link">Новинки</a>
             </li>
             <li class="header__nav-item">
               <a href="/" class="header__nav-link">О нас</a>
@@ -48,9 +48,11 @@
           </ul>
         </nav>
         <div class="header__actions">
-          <a href="/" class="header__action burger-menu">
-            <img class="burger-menu__img" src="./img/icons/Bag.svg" alt="Bag" />
-          </a>
+          <button id="burger-menu" class="header__action burger-menu" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <a href="/" class="header__action">
             <img class="header__action-img" src="./img/icons/Bag.svg" alt="Bag" />
           </a>
@@ -70,7 +72,7 @@
           <button class="full-screen__button">Продукция</button>
         </div>
       </section>
-      <section class="gallery container">
+      <section id="rep" class="gallery container">
         <div class="gallery__head">
           <h2 class="gallery__title">Репродукции</h2>
           <div class="gallery__filters">
@@ -160,7 +162,7 @@
           </div>
         </div>
       </section>
-      <section class="half-screen container">
+      <section id="new" class="half-screen container">
         <h2 class="half-screen__title">Новая коллекция французских авторов</h2>
         <div class="half-screen__content">
           <p class="half-screen__text">
@@ -254,5 +256,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js" defer></script>
   </body>
 </html>
